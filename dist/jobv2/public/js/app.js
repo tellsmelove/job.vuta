@@ -280,8 +280,8 @@ function outSideClick(target) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/ghinlop/Desktop/Server/job.vuta/src/jobv2/js/app.js */"./src/jobv2/js/app.js");
-module.exports = __webpack_require__(/*! /home/ghinlop/Desktop/Server/job.vuta/src/jobv2/sass/app.scss */"./src/jobv2/sass/app.scss");
+__webpack_require__(/*! /home/kimtrong/learning/projects/JobV2/src/jobv2/js/app.js */"./src/jobv2/js/app.js");
+module.exports = __webpack_require__(/*! /home/kimtrong/learning/projects/JobV2/src/jobv2/sass/app.scss */"./src/jobv2/sass/app.scss");
 
 
 /***/ })
