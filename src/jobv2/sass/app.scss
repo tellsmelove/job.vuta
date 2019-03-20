@@ -1,6 +1,6 @@
 @import './mixin';
 @import './global';
-@import './header1';
+@import './header';
 @import './footer';
 @import './detailperson';
 @import './updatecv';
@@ -179,16 +179,6 @@ body{
     border: none;
 }
 .img-banner{
-    &_about {
-        position: relative;
-        background-image: url('http://www.projectionpro.com/wp-content/uploads/2015/04/ServicesBanner-1140x300.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 300px;
-    }
-    
     &_text {
         position: absolute;
         top: 50%;
@@ -207,6 +197,3 @@ body{
         }
     }
 }
-.data-banner {
-        background-image: url('http://www.rpmrt.org.uk/wp-content/uploads/2018/01/IMG_1165-640x250.jpg') !important;
-    }

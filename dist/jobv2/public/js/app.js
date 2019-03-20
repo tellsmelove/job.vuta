@@ -93,114 +93,171 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var person_slider = new Swiper('.swiper-person', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  slidesPerGroup: 1,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  autoplay: {
-    delay: 5000
-  },
-  pagination: {
-    el: '.pagination-person',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40
-    },
-    769: {
-      slidesPerView: 2,
-      spaceBetween: 30
-    },
-    440: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    }
-  }
-});
-var main_slider = new Swiper('.swiper-main', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  autoHeight: true,
-  autoplay: {
-    delay: 5000
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-});
-var post_swiper_index = document.querySelectorAll('[data-swiper]');
-console.log([post_swiper_index]);
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
+var prevScrollpos = window.pageYOffset;
+var header = document.querySelector('#header');
+var sub_menu = document.getElementById('sub-menu');
+var toggle_menu = document.getElementById('toggle');
+var overlay = document.getElementById('overlay');
+$(document).ready(function () {
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var navbar = document.getElementById('navbar');
+    outSideClick(navbar);
 
-try {
-  for (var _iterator = post_swiper_index[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    var swiper = _step.value;
-    new Swiper(swiper.dataset.swiper, {
-      slidesPerView: 3,
-      direction: 'vertical',
-      simulateTouch: false,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          direction: 'horizontal',
-          simulateTouch: true,
-          autoplay: {
-            delay: 5000
-          }
-        },
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          direction: 'horizontal',
-          simulateTouch: true,
-          autoplay: {
-            delay: 5000
-          }
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          direction: 'horizontal',
-          simulateTouch: true,
-          autoplay: {
-            delay: 5000
-          }
-        },
-        767: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          direction: 'vertical',
-          simulateTouch: false
-        }
+    if (prevScrollpos >= currentScrollPos && window.pageYOffset !== 0) {
+      header.classList.add('affix');
+      header.classList.remove('hidden'); // navbar.classList.add('menu_left')
+    } else {
+      header.classList.remove('affix');
+      header.classList.remove('hidden');
+    }
+
+    if (window.pageYOffset == 0) {
+      header.classList.remove('affix');
+      header.classList.add('hidden'); // navbar.classList.remove('menu_left')
+    }
+
+    prevScrollpos = currentScrollPos;
+  };
+
+  toggle_menu.addEventListener('click', function (e) {
+    e.preventDefault();
+    var navbar = document.getElementById('navbar');
+    var height = header.clientHeight;
+    var classList = navbar.classList;
+
+    if (classList.contains('active')) {
+      outSideClick(navbar);
+    } else {
+      navbar.style.height = "calc(100vh - ".concat(height, "px - ").concat(sub_menu.clientHeight, "px)");
+      navbar.style.top = "".concat(height, "px");
+      navbar.classList.add('active');
+      overlay.classList.add('active');
+      overlay.style.top = "".concat(height, "px");
+      overlay.style.height = "calc(100vh - ".concat(height, "px)");
+    }
+  });
+  overlay.addEventListener('click', function () {
+    var navbar = document.getElementById('navbar');
+    outSideClick(navbar);
+  });
+  var person_slider = new Swiper('.swiper-person', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    autoplay: {
+      delay: 5000
+    },
+    pagination: {
+      el: '.pagination-person',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      },
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      440: {
+        slidesPerView: 1,
+        spaceBetween: 20
       }
-    });
-  }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
+    }
+  });
+  var main_slider = new Swiper('.swiper-main', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoHeight: true,
+    autoplay: {
+      delay: 5000
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+  var post_swiper_index = document.querySelectorAll('[data-swiper]');
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
   try {
-    if (!_iteratorNormalCompletion && _iterator.return != null) {
-      _iterator.return();
+    for (var _iterator = post_swiper_index[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var swiper = _step.value;
+      new Swiper(swiper.dataset.swiper, {
+        slidesPerView: 3,
+        direction: 'vertical',
+        simulateTouch: false,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            direction: 'horizontal',
+            simulateTouch: true,
+            autoplay: {
+              delay: 5000
+            }
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            direction: 'horizontal',
+            simulateTouch: true,
+            autoplay: {
+              delay: 5000
+            }
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            direction: 'horizontal',
+            simulateTouch: true,
+            autoplay: {
+              delay: 5000
+            }
+          },
+          767: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            direction: 'vertical',
+            simulateTouch: false
+          }
+        }
+      });
     }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
   } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
     }
   }
+});
+
+function outSideClick(target) {
+  target.classList.remove('active');
+  overlay.classList.remove('active');
+  setTimeout(function () {
+    target.removeAttribute('style');
+    overlay.removeAttribute('style');
+  }, 200);
 }
 
 /***/ }),
@@ -223,8 +280,8 @@ try {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/kimtrong/learning/projects/JobV2/src/jobv2/js/app.js */"./src/jobv2/js/app.js");
-module.exports = __webpack_require__(/*! /home/kimtrong/learning/projects/JobV2/src/jobv2/sass/app.scss */"./src/jobv2/sass/app.scss");
+__webpack_require__(/*! /home/ghinlop/Desktop/Server/job.vuta/src/jobv2/js/app.js */"./src/jobv2/js/app.js");
+module.exports = __webpack_require__(/*! /home/ghinlop/Desktop/Server/job.vuta/src/jobv2/sass/app.scss */"./src/jobv2/sass/app.scss");
 
 
 /***/ })

@@ -1,65 +1,83 @@
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-3 header-logo bg-light">
-                <a href="#" class="d-block h-100">
-                    <img src="{{img('ant-logo2.png')}}" alt="">
+            <div id="logo" class="col-xl-3 col-md-2 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="{{img('logo.png')}}" alt="">
                 </a>
             </div>
-            <div class="col-md-7 px-0 order-md-1 order-2">
-                <div class="d-md-flex flex-column h-100">
-                    <div class="header-sologan flex-grow-1 d-lg-flex d-none align-items-center justify-content-center">
-                        <span>TRUNG TÂM TUYỂN DỤNG & GIỚI THIỆU VIỆC LÀM VŨNG TÀU JOB.VUTA.VN</span>
-                    </div>
-                    <nav class="header-navbar" id="navbar">
-                        <ul class="nolist d-flex flex-md-row flex-column background-primary">
-                            <li><a href="#">Trang Chủ</a></li>
-                            <li><a href="#">Lượt Xem 500</a></li>
-                            <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Việc Làm Vũng Tàu
+            <div class="col-lg-6 col-md-7 px-0 header-middle order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
                                 </a>
-                                <!-- <a href="#" role="button"
-                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i class="fa fa-bars"></i>
-                                </a> -->
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    {% for item in data.menu %}
-                                    <li><a class="dropdown-item" href="#">{{item}}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Việc làm</span>
+                                    <span>Vũng Tàu</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
+                                    </ul>
+                                </aside>
+                            </li>
                         </ul>
                     </nav>
-
                 </div>
             </div>
-            <div class="col-md-3 col-6 header-control px-md-0 order-md-2 order-1 px-0">
-                <ul class="row nolist">
-                    <li class="col-md-6 background-primary"><a href="#">
-                        Đăng Ký
-                        </a></li>
-                    <li class="col-md-6 background-primary"><a href="#">
-                        Đăng Nhập
-                        </a></li>
-                    <li class="col-md-6 background-secondary"><a href="#">
-                        Nhập CV
-                        </a></li>
-                    <li class="col-md-6 background-info"><a href="#">
-                        Đăng Tuyển
-                        </a></li>
-                </ul>
-            </div>
-            <!-- <div class="col-3 d-md-none d-block order-1 header-toggle px-0">
-                <a href="#" class="d-block text-center" data-toggle-menu="#navbar">
-                    <i class="fa fa-bars fa-lg"></i>
-                    <span class="d-block text-center">Menu</span>
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 px-0">
+                <ul class="d-flex h-100 nolist">
+                    <li class="col-md-6 px-0">
+                        <a href="#">
+                            <i class="fa fa-lg fa-user"></i>
+                            <span>Đăng ký</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-lock"></i>
+                            <span>Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-address-card-o"></i>
+                            <span>Nhập CV</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-file"></i>
+                            <span>Đăng tuyển</span>
+                        </a>
+                    </li>
+            </aside>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
                 </a>
-            </div> -->
+            </div>
         </div>
     </div>
 </header>

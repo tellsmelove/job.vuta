@@ -14,12 +14,12 @@
 
 <body>
     <div id="app">
-        {% include 'components/header1.html' %}
+        {% include 'components/header.html' %}
         {% block content %}{% endblock %}
         {% include 'components/footer.html' %}
+        <div id="overlay"></div>
     </div>
 
-    <div class="news-footer"></div>
     <script src="{{ js('jquery.min.js') }}"></script>
     <script src="{{ js('popper.min.js') }}"></script>
     <script src="{{ js('bootstrap.min.js') }}"></script>
