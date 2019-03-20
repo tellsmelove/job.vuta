@@ -1,0 +1,384 @@
+$nocolor: transparent;
+@mixin transform($type: false) {
+    @if $type {
+        transform: $type;
+        -moz-transform: $type;
+        -ms-transform: $type;
+        -o-transform: $type;
+        -webkit-transform: $type;
+    }
+}
+
+@mixin effect($target: all, $time: .5s, $type: ease-in-out) {
+    @if($target !='none') {
+        transition: $target $time $type;
+        -o-transition: $target $time $type;
+        -ms-transition: $target $time $type;
+        -moz-transition: $target $time $type;
+        -webkit-transition: $target $time $type;
+    }
+    @else {
+        transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        -moz-transition: none;
+        -webkit-transition: none;
+    }
+}
+
+@mixin placeholder($color: #000, $hover: null, $focus: null) {
+    @content;
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: $color;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: $color;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $color;
+    }
+    @if $hover {
+        &:hover {
+            &::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: $hover;
+            }
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: $hover;
+            }
+            &:-ms-input-placeholder {
+                /* IE 10+ */
+                color: $hover;
+            }
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: $hover;
+            }
+        }
+    }
+    @if $focus {
+        &:focus {
+            &::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: $focus;
+            }
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: $focus;
+            }
+            &:-ms-input-placeholder {
+                /* IE 10+ */
+                color: $focus;
+            }
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: $focus;
+            }
+        }
+    }
+}
+
+@mixin checkbox($border: #000) {
+    input[type='checkbox'],
+    input[type='radio'] {
+        display: none;
+    }
+    input[type='checkbox']~label,
+    input[type='radio']~label {
+        margin: auto;
+        vertical-align: middle;
+        cursor: pointer;
+        &::before {
+            content: '\f00c';
+            background: transparent;
+            color: transparent;
+            display: inline-block;
+            font-family: 'FontAwesome';
+            font-size: 50px;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            border: 1px solid $border;
+            margin: -2px 10px auto 0;
+            line-height: 17px;
+            @include effect(all, 0.2s, linear);
+        }
+    }
+    input[type='radio']~label::before {
+        border-radius: 50%;
+    }
+    input[type='checkbox']:checked~label,
+    input[type='radio']:checked~label {
+        &::before {
+            color: #e74c3c;
+            background: #fff;
+            font-size: 20px;
+        }
+    }
+}
+
+@mixin e($el) {
+    &_#{$el} {
+        @content;
+    }
+}
+
+@mixin iconlist($i: null, $m: 5px) {
+    @if $i {
+        content: $i;
+        font-family: $fa;
+        margin-right: $m;
+        @content;
+    }
+}
+
+@mixin fonts($name: null, $weight: normal, $style: normal, $format: truetype) {
+    @if $name {
+        @font-face {
+            font-family: '#{$name}';
+            font-weight: $weight;
+            font-style: '#{$style}';
+            @content;
+        }
+    }
+}
+
+@mixin bg-color($f: #000, $h: null, $active: null) {
+    background-color: $f;
+    @if $h {
+        &:hover {
+            background-color: $h;
+        }
+    }
+    @if $active {
+        &.active {
+            background-color: $h;
+        }
+    }
+    @content;
+}
+
+@mixin text-color($f: #000, $h: null, $active: null) {
+    color: $f;
+    @if $h {
+        &:hover {
+            color: $h;
+        }
+    }
+    @if $active {
+        &.active {
+            color: $h;
+        }
+    }
+    @content;
+}
+
+@mixin border($c: #000, $n: null) {
+    @if $c {
+        @if $n {
+            .border-#{$n} {
+                border-color: $c !important;
+            }
+        }
+        @else {
+            border-color: $c !important;
+        }
+    }
+    @content;
+}
+
+@mixin border-hf($hover: null, $focus: null) {
+    @if $hover {
+        &:hover {
+            border-color: $hover !important;
+            @content;
+        }
+    }
+    @if $focus {
+        &:focus {
+            border-color: $focus !important;
+            @content;
+        }
+    }
+}
+
+@mixin priceBox($n: null, $c: null, $h: null, $t: #fff) {
+    @if $n and $c and $h {
+        &.#{$n} {
+            .header {
+                background-color: $c;
+                .price,
+                .price-top {
+                    color: $c;
+                    border-color: $c;
+                }
+            }
+            .header-sub {
+                background-color: $h;
+                color: $t;
+            }
+            .footer {
+                @include bg-color($c, $h);
+            }
+        }
+    }
+}
+
+@mixin arrow($pos: null, $width: null, $color: null) {
+    @if $pos and $width and $color {
+        position: absolute;
+        @if $pos=='top' {
+            border-top: 0 solid $nocolor;
+            border-bottom: $width solid $color;
+            border-left: $width solid $nocolor;
+            border-right: $width solid $nocolor;
+        }
+        @if $pos=='bottom' {
+            border-bottom: 0 solid $nocolor;
+            border-top: $width solid $color;
+            border-left: $width solid $nocolor;
+            border-right: $width solid $nocolor;
+        }
+        @if $pos=='left' {
+            border-top: $width solid $nocolor;
+            border-bottom: $width solid $nocolor;
+            border-left: 0 solid $nocolor;
+            border-right: $width solid $color;
+        }
+        @if $pos=='right' {
+            border-top: $width solid $nocolor;
+            border-bottom: $width solid $nocolor;
+            border-left: $width solid $color;
+            border-right: 0 solid $nocolor;
+        }
+        @content;
+    }
+}
+
+@mixin uikit-alert-bg($name: null, $bg: null, $color: #fff) {
+    @if $name and $bg {
+        .uk-notification-message-bg-#{$name} {
+            background-color: $bg !important;
+            color: $color !important;
+            @content;
+        }
+    }
+}
+
+@mixin color-render($name: null, $color: null, $border: null) {
+    @if $name and $color {
+        .bg-#{$name} {
+            background-color: $color !important;
+        }
+        .text-#{$name} {
+            color: $color !important;
+        }
+        @include lg {
+            .bg-lg-#{$name} {
+                background-color: $color !important;
+            }
+            .text-lg-#{$name} {
+                color: $color !important;
+            }
+        }
+        @include xl {
+            .bg-xl-#{$name} {
+                background-color: $color !important;
+            }
+            .text-xl-#{$name} {
+                color: $color !important;
+            }
+        }
+        @include md {
+            .bg-md-#{$name} {
+                background-color: $color !important;
+            }
+            .text-md-#{$name} {
+                color: $color !important;
+            }
+        }
+        @include sm {
+            .bg-sm-#{$name} {
+                background-color: $color !important;
+            }
+            .text-sm-#{$name} {
+                color: $color !important;
+            }
+        }
+    }
+    @if $border {
+        .border- {
+            &#{$name} {
+                border: 1px solid $color !important;
+                &-left {
+                    border-left: 1px solid $color !important;
+                }
+                &-right {
+                    border-right: 1px solid $color !important;
+                }
+                &-bottom {
+                    border-bottom: 1px solid $color !important;
+                }
+                &-top {
+                    border-top: 1px solid $color !important;
+                }
+            }
+        }
+    }
+}
+
+@mixin sm($min-w: 576px) {
+    @media screen and (min-width: $min-w) {
+        @content;
+    }
+}
+
+@mixin md($min-w: 768px) {
+    @media screen and (min-width: $min-w) {
+        @content;
+    }
+}
+
+@mixin lg($min-w: 992px) {
+    @media screen and (min-width: $min-w) {
+        @content;
+    }
+}
+
+@mixin xl($min-w: 1200px) {
+    @media screen and (min-width: $min-w) {
+        @content;
+    }
+}
+
+@mixin max-sm($max-w: 575px) {
+    @media screen and (max-width: $max-w) {
+        @content;
+    }
+}
+
+@mixin max-md($max-w: 767px) {
+    @media screen and (max-width: $max-w) {
+        @content;
+    }
+}
+
+@mixin max-lg($max-w: 991px) {
+    @media screen and (max-width: $max-w) {
+        @content;
+    }
+}
+
+@mixin max-xl($max-w: 1199px) {
+    @media screen and (max-width: $max-w) {
+        @content;
+    }
+}

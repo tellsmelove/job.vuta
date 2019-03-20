@@ -1,0 +1,70 @@
+.employer {
+    &-box {
+        background-color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        @include max-lg {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #000;
+            &:hover {
+                color: #1c9c05;
+            }
+        }
+    }
+    &-listjob:not(:last-child) {
+        border-bottom: 1px dotted orangered;
+        padding-bottom: 12px;
+    }
+}
+
+.icons-job {
+    &::before {
+        content: '\f090';
+        font-family: Fontawesome;
+        font-size: 3rem;
+    }
+}
+.icons2-job {
+       &::before {
+        content: '\f02d';
+        font-family: Fontawesome;
+        font-size: 3rem;
+    }
+}
+.number-job {
+    font-size: 22pt;
+}
+.header-login {
+    a {
+        padding: 25px 20px!important;
+        @include max-sm {
+            padding: 15px 20px!important;
+        }
+        
+    }
+}
+.display-none {
+    @include max-sm {
+        display: none;
+    }
+}
+.timepost {
+    border: 1px solid #ddd;
+    a {
+        background-color: #1378d2;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 4px; 
+        font-weight: bold;
+    }
+}
+.list--job {
+    td:first-child {
+        text-align: center;
+        font-size: 85%;
+    }
+}

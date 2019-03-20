@@ -1,0 +1,212 @@
+@import './mixin';
+@import './global';
+@import './header1';
+@import './footer';
+@import './detailperson';
+@import './updatecv';
+@import './employer';
+@import './employerpost';
+body{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.item-function {
+    background-color: #fff;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    transition: all .15s ease-in-out;
+}
+
+.post {
+    &-item {
+        background-color: rgba(#fff, .8);
+        &:hover {
+            background-color: #fff;
+        }
+        &-link {
+            color: #000;
+            &:hover {
+                color: #1c9c05;
+            }
+        }
+        
+    }
+
+    &-itemlist{
+        border-bottom: 1px solid #dee2e6;
+        margin: 0!important;
+        &-title {
+            font-size: 13pt;
+            color: #c0392b;
+            &:hover{
+             color: orangered;
+            }
+        }
+        &-company {
+            font-size: 13pt;
+            color: #999;
+            &:hover{
+             color: #2f3640;
+            }
+        }
+        &-link {
+            color: #2f3640;
+             &:hover{
+             color: orangered;
+            }
+        }
+        &:hover {
+            background-color: #eee;
+            
+        }
+    }
+    &-tags{
+        display: block;
+        background-color:#868686;
+        color: #fff;
+        border-radius: 4px;
+        margin: 4px;
+        font-size: 11pt;
+        
+        &:hover {
+            background-color: rgba(#1c9c05, .7);
+            color: #fff;
+        }
+    }
+
+}
+.swiper-slide {
+    height: auto;
+}
+.post-title-sm {
+    @include max-sm {
+        text-align: center;
+    }
+}
+.company-sm {
+    @include max-sm {
+        text-align: center;
+    }
+}
+.title-post {
+    display: block;
+    padding: 10px 5px;
+    background-color: #43A047;
+    color: #fff;
+    font-weight: bold;
+    &:hover {
+        color: #ccd1cc;
+    }
+}
+.input-seach {
+    position: relative;
+    z-index: 0;
+    .icons-home {
+        position: absolute;
+        z-index: 1;
+        left: 15px;
+        top: 50%;
+        font-size: 15pt;
+        color: #1c9c05;
+        transform: translateY(-50%);
+        @include max-sm {
+            display: none;
+        }
+    }
+    
+    input {
+        padding: 0.6rem 0.5rem 0.6rem 2.5rem;
+        @include max-sm {
+            padding: 0.5rem 0 0.5rem 0.5rem;
+        }
+    }
+    &-link {
+        display: block;
+        padding: 0.6rem 0.5rem 0.6rem 2.5rem;
+        border: 1px solid #dee2e6;
+        background-color: #1c9c05;
+        color: #fff;
+        font-weight: bold;
+        margin-top: 0px;
+        &:hover {
+            background-color: #104e04;
+            color: #fff;
+        }
+    }
+}
+.input-select{
+    background-color: #fff!important;
+    padding: 0.75rem 0.5rem 0.75rem 2.5rem;
+    @include max-sm {
+            padding: 0.5rem 0 0.5rem 0.5rem;
+        }
+}
+.banner-slide {
+    @include max-sm {
+        // display: none;
+    }
+}
+.swiper-main{
+    img{
+        width: 100%;
+        height: 300px;
+        @include max-sm {
+            height: 150px;
+        }
+    }
+}
+.banner-bottom {
+    @include max-sm {
+        display: none;
+    }
+}
+.three-banner {
+    img {
+        max-height: 250px;
+        width: 100%;
+    }
+}
+.btn-submit-seach {
+    display: block;
+    background-color: #43A047;
+    color: #fff;
+    font-weight: bold;
+    min-width: 100%;
+    min-height: 100%;
+    border: none;
+}
+.img-banner{
+    &_about {
+        position: relative;
+        background-image: url('http://www.projectionpro.com/wp-content/uploads/2015/04/ServicesBanner-1140x300.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 300px;
+    }
+    
+    &_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(71, 191, 49, .6);
+        color: #fff;
+        padding: 40px 40px;
+        font-size: 18pt;
+        font-weight: bold;
+        span {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+.data-banner {
+        background-image: url('http://www.rpmrt.org.uk/wp-content/uploads/2018/01/IMG_1165-640x250.jpg') !important;
+    }

@@ -1,0 +1,197 @@
+#header{
+    width: 100%;
+    position: static;
+    top:-100%;
+    transition: .4s ease all;
+    z-index: 999;
+    background-color: green;
+    a{
+        display: block;
+        padding: 8px 10px;
+        color: #000;
+        font-weight: bold;
+        @include bg-color($nocolor, #43a932);
+        
+        &:hover{
+            color: #fff;
+            background-color: blue;
+        }
+    }
+    &.affix{
+        position: fixed;
+        top: 0;
+    }
+    .dropdown-menu {
+        background-color: #f1f1f1;
+    }
+    .dropdown {
+        .btn {
+            border-right: none!important;
+            border-top: none!important;
+            border-bottom: none!important;
+            border-left: 1px solid rgba(162, 162, 162, 0.25);
+        }
+    }
+    .dropdown-item {
+        border-bottom: 1px solid rgba(162, 162, 162, 0.25);
+        // &:last-child{
+        //     border-bottom: none;
+        // }
+    }
+}
+.header{
+    &-logo{
+        border-right: 1px solid rgba(#44bf2e, .4);
+        @include max-md {
+            padding: 10px;
+        }
+        a{
+            @include bg-color($nocolor!important, $nocolor!important);
+            position: relative;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                @include max-md{
+                    width: 80px;
+                    
+                }
+            }
+        }
+    }
+    &-sologan{
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        padding: 5px 15px;
+        border-bottom: 1px solid rgba(212, 202, 202, 0.68);
+        @include md{
+            border-left: 1px solid rgba(162, 162, 162, 0.25);
+            border-right: 1px solid rgba(241, 244, 247, 0);
+        }
+        @include max-md{
+            font-size: 10pt;
+        }
+    }
+    &-control{
+        // border-left: 1px solid rgba(249, 249, 249, 0.56);
+        li{
+            @include max-md{
+                border-bottom: 1px solid rgba(162, 162, 162, 0.25);
+            }
+            &:first-child{
+                @include md{
+                    // border-bottom: 1px solid rgba(97, 105, 96, 0.4);
+                }
+                @include max-md{
+                    border-top: 1px solid rgba(214, 205, 205, 0.25);
+                }
+            }
+            &:last-child{
+                @include md{
+                    border-top: 1px solid rgba(224, 221, 221, 0.43);
+                }
+                @include max-md{
+                    border-left: 1px solid rgba(#000, .7);
+                    border-right: 1px solid rgba(#44bf2e, .4);
+                }
+            }
+            @include max-lg{
+                flex: 1;
+                height: 50%;
+                font-size: 10pt;
+            }
+            @include max-md{
+                @include max-md{
+                    flex: 1 1 auto;
+                }
+            }
+        }
+        a{
+            text-align: center;
+            @include md{
+                .fa{
+                    display: none;
+                }
+            }
+            @include max-md{
+                font-size: 10pt;
+            }
+        }
+    }
+    &-toggle{
+        border-left: 1px solid rgba(162, 162, 162, 0.25);
+        a{
+            font-size: 10pt;
+        }
+    }
+    &-navbar{
+        border-top: 1px solid rgba(162, 162, 162, 0.25);
+        border-bottom: 1px solid rgba(#44bf2e, .4);
+        border-right: 1px solid rgba(241, 244, 247, 0);
+        @include md{
+            text-align: center;
+        }
+        @include max-lg{
+            font-size: 10pt
+        }
+        @include max-md{
+            border-top: 0 solid rgba(162, 162, 162, 0.25);
+            border-width: 0;
+            overflow-y: hidden;
+            height: 0px;
+            transition: .4s ease all;
+            border-width: 0;
+            ul{
+                padding: 5px;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.3);
+                li{
+                    &:not(:last-child){
+                        border-bottom: 1px solid rgba(162, 162, 162, 0.25);
+                        border-right: 0;
+                    }
+                    a{
+                        &::before{
+                            content: '\f0da';
+                            font-family: Fontawesome;
+                            margin-right: 5px;
+                        }
+                        &:hover{
+                            background-image: linear-gradient(to right, rgb(17, 73, 15),  #44bf2e);
+                        }
+                    }
+                }
+            }
+        }
+        li{
+            flex: 1 1 auto;
+        }
+        li:not(:last-child){
+            border-right: 1px solid rgba(#f1f4f7, .4);
+        }
+        li:not(:first-child){
+            border-left: 1px solid rgba(#969696, .7);
+        }
+    }
+}
+.background-primary {
+    display: block;
+    background-color: #f1f1f1;
+    color: #000;
+}
+.background-secondary {
+    background-color: #494848;
+    color: #000;
+     a {
+        color: #fff!important;
+    }
+}
+.background-info {
+    background-color: #771b1b;
+    color: #000;
+    a {
+        color: #fff!important;
+    }
+}

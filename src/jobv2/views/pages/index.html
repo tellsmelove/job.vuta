@@ -1,0 +1,688 @@
+{% extends 'layouts/default.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+
+<section class="py-3">
+    <div class="container banner-slide">
+        <div class="swiper-container swiper-main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{{img('slide-bg.jpg')}}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{img('slide-bg2.jpg')}}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{img('slide-bg3.jpg')}}" alt="">
+                </div>
+
+                <div class="swiper-pagination pagination-main"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="event py-lg-4 py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="post-item border mr-lg-3">
+                    <h5 class="border-bottom text-center mb-0">
+                        <a href="#" class="title-post">Sự Kiện Tuyển Dụng</a>
+                    </h5>
+                    <div class="text-center">
+                        <a href="#"><img src="https://toysforkidreviews.com/wp-content/uploads/2018/08/10692-670x300.jpg" alt="eventjob"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="post-item border ml-lg-3">
+                    <h5 class="border-bottom text-center mb-0">
+                        <a href="#" class="title-post">Sự Kiện Tuyển Dụng</a>
+                    </h5>
+                    <div class="text-center">
+                        <a href="#"><img src="https://toysforkidreviews.com/wp-content/uploads/2018/08/10692-670x300.jpg" alt="eventjob"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="seach bg-light p-3">
+    <div class="container">
+        <form class="row" action="" method="post">
+            <div class="col-lg-4 my-2">
+                <div class="input-seach">
+                    <i class="fa fa-briefcase icons-home" aria-hidden="true"></i>
+                    <input class="w-100 " autocomplete="off"
+                        placeholder="Tiêu đề công việc, vị trí, địa điểm làm việc...">
+                </div>
+            </div>
+            <div class="col-lg-3 my-2">
+                <div class="input-seach w-100 input-group">
+                    <i class="fa fa-key icons-home" aria-hidden="true"></i>
+                    <select class="input-select input-seach selectpicker w-100">
+                        <option value="audi" selected disabled>Tất cả ngành nghề</option>
+                        {% for item in data.selects %}
+                        <option class="input-select-item" value="volvo">{{item}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3 my-2">
+                <div class="input-seach w-100 input-group">
+                    <i class="fa fa-map-marker icons-home" aria-hidden="true"></i>
+                    <select class="input-select input-seach selectpicker w-100">
+                        <option value="audi" selected disabled>Địa điểm</option>
+                        {% for item in data.local %}
+                        <option class="input-select-item" value="volvo">{{item}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-2 my-2">
+                <button type="submit" class="btn-submit-seach">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    Tìm kiếm
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="post bg-light">
+    <div class="container">
+        <div class="d-flex flex-wrap py-3">
+            <div class="col-xl-4 col-lg-4 col-md-6 p-0 my-md-3">
+                <div class="post-item border mr-lg-3">
+                    <h5 class="border-bottom text-center mb-0"><a href="#" class="title-post">Việc làm quản lý </a></h5>
+                    <div id="testone" class="swiper-container" data-swiper="#testone">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span></span>7.000.000đ - 10.000.000đ</a>
+                                            <a class="post-tags p-1" href="#"><span></span>BR-VT</a>
+                                            <a class="post-tags p-1" href="#"><span></span>ĐH</a>
+                                            <a class="post-tags p-1" href="#"><span></span>18-4-2019</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next2"></div>
+                            <div class="swiper-button-prev2"></div>
+                        </div>
+                    </div>
+                    <div class="col p-2 text-center">
+                        <a href="#" class="post-item-link"><span>Xem tất cả</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 p-0 my-md-3">
+                <div class="post-item border mx-lg-2">
+                    <h5 class="border-bottom text-center mb-0"><a href="#" class="title-post">Việc Làm Văn Phòng</a>
+                    </h5>
+                    <div id="testone2" class="swiper-container" data-swiper="#testone2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-2 text-center">
+                        <a href="#" class="post-item-link"><span>Xem tất cả</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 p-0 my-md-3">
+                <div class="post-item border ml-lg-3">
+                    <h5 class="border-bottom text-center mb-0"><a href="#" class="title-post">Việc Làm Thực Tập</a></h5>
+                    <div id="testone3" class="swiper-container" data-swiper="#testone3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-2 text-center">
+                        <a href="#" class="post-item-link"><span>Xem tất cả</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 p-0 my-md-3">
+                <div class="post-item border mr-lg-3">
+                    <h5 class="border-bottom text-center mb-0"><a href="#" class="title-post">Việc Làm Ngoài Nước</a>
+                    </h5>
+                    <div id="testone4" class="swiper-container" data-swiper="#testone4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-2 text-center">
+                        <a href="#" class="post-item-link"><span>Xem tất cả</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 p-0 my-md-3">
+                <div class="post-item border mx-lg-2">
+                    <h5 class="border-bottom text-center mb-0"><a href="#" class="title-post">Việc Làm Thời Vụ</a></h5>
+                    <div id="testone5" class="swiper-container" data-swiper="#testone5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next2"></div>
+                            <div class="swiper-button-prev2"></div>
+                        </div>
+                    </div>
+                    <div class="col p-2 text-center">
+                        <a href="#" class="post-item-link"><span>Xem tất cả</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 p-0 my-md-3">
+                <div class="post-item border ml-lg-3">
+                    <h5 class="border-bottom text-center mb-0"><a href="#" class="title-post">Việc Làm Partime</a></h5>
+                    <div id="testone6" class="swiper-container" data-swiper="#testone6">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row post-itemlist align-items-center m-2">
+                                    <div class="col-md-4 mt-2 mb-2">
+                                        <a href="#" clas="d-block"><img src="{{img('dongtam.jpg')}}" alt=""></a>
+                                    </div>
+                                    <div class="col-md-8 text-left p-0">
+                                        <ul class="nolist">
+                                            <li class="post-title-sm">
+                                                <a href="#" class="post-itemlist-title">Quản lí khách sạn Hoa Hồng</a>
+                                            </li>
+                                            <li class="company-sm">
+                                                <a href="#" class="post-itemlist-company">Khách sạn hoa hồng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col mb-2 mt-1">
+                                        <div class="row text-left">
+                                            <a class="post-tags p-1" href="#"><span>7.000.000đ - 10.000.000đ</span></a>
+                                            <a class="post-tags p-1" href="#"><span>BR-VT</span></a>
+                                            <a class="post-tags p-1" href="#"><span>ĐH</span></a>
+                                            <a class="post-tags p-1" href="#"><span>18-4-2019</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next2"></div>
+                            <div class="swiper-button-prev2"></div>
+                        </div>
+                    </div>
+                    <div class="col p-2 text-center">
+                        <a href="#" class="post-item-link"><span>Xem tất cả</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bannerQC py-lg-4 py-3">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-6 mb-3 mb-md-0">
+                <div class="img-banner_about data-banner ">
+                    <a href="#" class="img-banner_text"><span>DATA DOANH NGHIỆP</span></a>
+                </div>
+            </div>
+            <div class=" col-md-6 ">
+                <div class="img-banner_about data-banner">
+                    <a href="#" class="img-banner_text"><span>DATA ỨNG VIÊN</span></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container py-lg-4 py-3">
+        <a href="#"><img class="w-100"
+                src="https://www.lizzardonline.com/wp-content/uploads/2018/06/FLASH-SALE-PROMO-1200-X-220-CATAGORY-BANNER.jpg"
+                alt=""></a>
+    </div>
+    <div class="container three-banner ">
+        <div class="swiper-container swiper-person text-center">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" target="_blank"><img
+                            src="http://blog.cosine-inn.com/wp-content/uploads/2013/05/cropped-cosine-banner-6-330x250.jpg"
+                            alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" target="_blank"><img
+                            src="https://www.itsecurityguru.org/wp-content/uploads/2017/07/security-serious-banner-330x280-330x250.png"
+                            alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" target="_blank"><img
+                            src="http://www.woorockets.com/wp-content/uploads/2017/01/banner-to-product-lines-330x250.png"
+                            alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" target="_blanl"><img
+                            src="https://2.bp.blogspot.com/-DKhksSLoIL4/XGKZLdZwNbI/AAAAAAAAQf0/84uvBvR-k8MWpIsPGY9MxV2IaatVsYGtwCLcBGAs/s1600/bread-breakfast-bun-1633525%2B%25281%2529.jpg"
+                            alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-pagination pagination-person"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+<section class="bg-light py-3">
+    <div class="container img-banner_about">
+        <a href="#" class="img-banner_text"><span>Giới Thiệu Vuta.vn</span></a>
+    </div>
+</section>
+{% endblock %}

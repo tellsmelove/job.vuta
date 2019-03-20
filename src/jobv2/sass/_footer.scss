@@ -1,0 +1,94 @@
+// #footer{
+//     background-color: #106507;
+//     color: #fff;
+//     // background-image: linear-gradient(-45deg, #d7f7d7, #f8f9fa, #dbf5db);
+//     color: #fff;
+//     a{
+//         display: block;
+//         padding: 12px 10px;
+//         color: #fff;
+//         font-size: 14pt;
+//         @include bg-color($nocolor,);
+//         &::before {
+//             content: '\f0da';
+//             font-family: Fontawesome;
+//             margin-right: 5px;
+//         }
+//         &:hover {
+//             background-color: none;
+//             color: #1e291e;
+//         }
+//     }
+//     .title-footer {
+//         font-weight: bold;
+//         font-size: 17pt;
+//     }
+// }
+// .bor-footer {
+//     border: 1px solid#fff;
+// }
+// .maps {
+//     position: relative;
+//     min-height: 88%;
+//     @include max-md {
+//         // min-height: 300px!important;
+//     }
+//     &-son {
+//         position: absolute;
+//         height: 100%;
+//         @include max-lg {
+//             position: absolute;
+//             height: 250px!important;
+//         }
+//     }
+// }
+// .fanpage {
+//     @include max-sm {
+//         margin-top: 16rem;
+//     }
+// }
+#footer{
+    background-image: url('https://ak0.picdn.net/shutterstock/videos/18131500/thumb/3.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    color: #fff;    
+    &::before{
+        content: '';
+        z-index: -1;
+        position: absolute;
+        background-image: linear-gradient(to top, rgba(15, 129, 44, 0.555) , rgba(7, 102, 30, 0.603));
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    address{
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        @include md{
+            padding: 100px 15px;
+        }
+        @include max-lg {
+            margin-bottom: 10px;
+        }
+        height: 100%;
+        margin-bottom: 0;
+        p{
+            font-size: 14pt;
+        }
+        a{
+            font-size: 13pt;
+            @include text-color(#fff, #ddd);
+        }
+    }
+}
+.fanpage-fb {
+    margin-top: -5px;
+    @include max-sm {
+        margin-top: 10px;
+    }
+}

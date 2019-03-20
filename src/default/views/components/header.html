@@ -1,0 +1,47 @@
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-3 header-logo bg-light">
+                <a href="#" class="d-block h-100">
+                    <img src="{{img('ant-logo2.png')}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-8 px-0 order-md-1 order-2">
+                <div class="d-md-flex flex-column h-100">
+                    <nav class="header-navbar" id="navbar">
+                        <ul class="nolist d-flex flex-md-row flex-column">
+                            <li><a href="#">Trang Chủ</a></li>
+                            <li><a href="#">Lượt View 500</a></li>
+                            {% for item in data.menu %}
+                            <li><a href="#">{{item}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                    <div class="header-sologan flex-grow-1 d-lg-flex d-none align-items-center justify-content-center">
+                        <span>Trung tâm giới thiệu việc làm Vũng Tàu - VUTA.VN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 header-control px-md-0 order-md-2 order-1 px-0">
+                <ul class="d-flex flex-md-column flex-row nolist">
+                    <li class="h-50"><a href="#">
+                            <i class="fa fa-handshake-o fa-lg"></i>
+                            <span class="d-lg-inline d-md-block d-none">Đăng Tin</span>
+                            <span class="d-lg-inline d-block">Tuyển Dụng</span>
+                        </a></li>
+                    <li class="h-50"><a href="#">
+                            <i class="fa fa-support fa-lg"></i>
+                            <span class="d-lg-inline d-md-block d-block">Tư Ván</span>
+                            <span class="d-lg-inline d-md-block d-none">Nghề Nghiệp 123</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="col-3 d-md-none d-block order-1 header-toggle px-0">
+                <a href="#" class="d-block text-center" data-toggle-menu="#navbar">
+                    <i class="fa fa-bars fa-lg"></i>
+                    <span class="d-block text-center">Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

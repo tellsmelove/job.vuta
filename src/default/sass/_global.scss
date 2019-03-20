@@ -1,0 +1,95 @@
+.nolist {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-small {
+    font-size: 10pt;
+}
+.text-xsmall {
+    font-size: 9pt;
+}
+
+.text-normal {
+    font-size: 12pt;
+}
+
+.text-large {
+    font-size: 15pt;
+}
+
+.text-xlarge {
+    font-size: 20pt;
+}
+
+$margin: 1;
+@while $margin < 6 {
+    .auto-margin- {
+        &#{$margin}>* {
+            margin: .25rem * $margin !important;
+        }
+    }
+    .auto-margin-y- {
+        &#{$margin}>* {
+            margin: .25rem * $margin 0 !important;
+        }
+    }
+    .auto-margin-x- {
+        &#{$margin}>* {
+            margin: 0 0.25rem * $margin !important;
+        }
+    }
+    .auto-margin-t- {
+        &#{$margin}>* {
+            margin: 0.25rem * $margin 0 0 0 !important;
+        }
+    }
+    .auto-margin-b- {
+        &#{$margin}>* {
+            margin: 0 0 0.25rem * $margin 0 !important;
+        }
+    }
+    .auto-margin-l- {
+        &#{$margin}>* {
+            margin: 0 0 0 0.25rem * $margin !important;
+        }
+    }
+    .auto-margin-r- {
+        &#{$margin}>* {
+            margin: 0 0.25rem * $margin 0 0 !important;
+        }
+    }
+    $margin: $margin+1;
+}
+$flex: 1;
+@while $flex < 7 {
+    .flex-#{$flex}{
+        flex: $flex;
+    }
+    $flex: $flex+1;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    margin: 0;
+    appearance: none;
+    -moz-appearance: textfield;
+}

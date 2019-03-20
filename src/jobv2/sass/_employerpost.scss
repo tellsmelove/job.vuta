@@ -1,0 +1,138 @@
+.form-box {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    input {
+        display: none;
+    }
+    label {
+        &::before {
+            content: '';
+            font-family: Fontawesome;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #696666;
+            margin-right: 10px;
+            vertical-align: middle;
+            transform: translateY(-5%);
+        }
+    }
+    input:checked + label::before {
+        content: '\f00c';
+        font-family: Fontawesome;
+        z-index: 99;
+        padding: 0px 5px;
+        
+        color: #46da1a;
+    }
+}
+.form-box-filter {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    height: 250px;
+    overflow: auto;
+    .career-check {
+        display: none;
+    }
+    label {
+        &::before {
+            content: '';
+            font-family: Fontawesome;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #696666;
+            margin-right: 10px;
+            border-radius: 30%;
+            vertical-align: middle;
+            transform: translateY(-5%);
+        }
+    }
+    .career-check:checked + label::before {
+        content: '\f00c';
+        font-family: Fontawesome;
+        z-index: 99;
+        padding: 0px 5px;
+        color: #46da1a;
+    }
+}
+.form-title {
+    &::before {
+        content: '* ';
+        color: red;
+    }
+}
+.title-box {
+    color: #c0392b;
+    font-weight: bold;
+    padding: 16px 0px;
+}
+.form-control-pd {
+    padding: 24px 10px;
+}
+.form-control-ps {
+    height: 48px;
+}
+.link-lose-form {
+    background-color: #fff;
+    color: gray;
+    font-weight: bold;
+    padding: 12px 14px;
+    border-radius: 4px;
+    margin: 0px 8px;
+    border: 1px solid #ddd;
+    &:hover {
+        background-color: #ececec;
+        color: #000;
+    }
+}
+.link-post-form {
+    background-color: #e74c3c;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: none;
+    &:hover {
+        background-color: #942b20;
+        color: #fff;
+    }
+}
+.icon1-edit-post {
+    
+    &::before {
+        content: '\f09d';
+        font-family: Fontawesome;
+        font-size: 26px;
+        
+    }
+}
+.icon1-del-post {
+
+    &::before {
+        content: '\f1f8';
+        font-family: Fontawesome;
+        font-size: 26px;
+    }
+}
+.deadlinepost {
+    @include max-sm {
+        display: none;
+    }
+}
+.bootstrap-tagsinput {
+    width: 100%;
+    border: none;
+    padding: 10px 6px;
+    .tag {
+    color: #fff;
+    background-color: #0cb19b;
+    padding: 3px 5px;
+    margin-top: 5px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 4px;
+    }
+}
