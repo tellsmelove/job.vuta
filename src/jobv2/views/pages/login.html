@@ -1,0 +1,64 @@
+{% extends 'layouts/default.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<section class="login-page py-lg-6 py-md-5 py-4">
+    <div class="container">
+        <form class="row" action="" method="POST">
+            <div class="col-xl-8 offset-xl-2  boxshadow">
+                <div class="row">
+                    <div class="col-lg-7 login-page-boxleft border-right border-muted mb-3 mb-md-0">
+                        <div class="mx-2 py-4">
+                            <h2 class="login-page-title">Đăng nhập</h2>
+                            <ul class="nolist list-text text-dark">
+                                <li>Tiếp cận hàng triệu công việc hoàn toàn miễn phí</li>
+                                <li>Ứng tuyển nhanh chóng, dễ dàng</li>
+                                <li>Nhận bản tin công việc phù hợp định kỳ</li>
+                                <li>Nâng cao cơ hội tìm việc với chương trình ứng viên năng động </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 login-page-boxright text-center mb-3 py-3">
+                        <div class="mx-2 py-3">
+                            <a href="#"><img src="{{img('ant-logo2.png')}}" alt=""> </a>
+                        </div>
+                        <div class="form-group">
+                            <div class="position-relative">
+                                <i class="fa fa-user icon-person" aria-hidden="true"></i>
+                                <input class="form-control w-100 form-group-user" autocomplete="off" placeholder="Nhập Tài khoản" required>
+                            </div>
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">User này không tồn tại</small>
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="position-relative">
+                                <i class="fa fa-key icon-person" aria-hidden="true"></i>
+                                <input class="form-control w-100 form-group-user" type="password" autocomplete="off" placeholder="Mật khẩu" required>
+                            </div>
+                        </div>
+                        <div class="text-left w-100 mx-2">
+                            <small class="text-danger" hidden>Mật khẩu không đúng</small>
+                        </div>
+                        <div class="mt-2">
+                            <button type="submit" class="login-page-link-login">Đăng nhập</button>
+                        </div>
+                        <div class="row mt-2">
+                            <hr width="50"><span class="text-opacity">Hoặc</span>
+                            <hr width="50">
+                    
+                        </div>
+                        <div class="mt-2">
+                            <a href="#"><span class="text-opacity">Quên mật khẩu</span></a>
+                        </div>
+                        <div class="row text-center justify-content-center py-2">
+                            <p>Bạn chưa có tài khoản? <a href="#">Đăng ký</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

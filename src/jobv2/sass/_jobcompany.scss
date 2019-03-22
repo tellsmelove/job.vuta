@@ -1,0 +1,44 @@
+.job-company{
+    &__title {
+        font-size: 15pt;
+        color: #c0392b;
+        &:hover{
+        color: orangered;
+        }
+    }
+    &__listjob{
+        color: gray;
+        &:hover {
+            color: #2f3640;
+        }
+        &::before {
+            content: '\f0da';
+            font-family: Fontawesome;
+            margin-right: 5px;
+        }
+    }
+    &__link {
+        color: #000;
+        &:hover {
+            color: rgba(#000, .5);
+        }
+    }
+}
+.card-thumb-company{
+    flex: 5;
+    overflow: hidden;
+    position: relative;
+    min-height: 140px;
+    @include max-sm {
+        height: 240px;
+    }
+    img{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+}
+.card-body-company{
+    flex: 1;
+}

@@ -8,48 +8,97 @@
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/font-awesome.css">
     <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-tagsinput.min.css">
     <link rel="stylesheet" href="./public/css/app.css">
     <title>listjob-employer</title>
 </head>
 
 <body>
     <div id="app">
-        <!-- <header id="header">
-            <header id="header" class="header-login">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-9 header-logo bg-light">
-                            <a href="#" class="d-block h-100">
-                                <img src="./public/images/ant-logo2.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-10 px-0 order-md-1 order-2 text-right">
-                            <div class="d-md-inline-flex flex-column h-100">
-                                <nav class="header-navbar" id="navbar">
-                                    <ul class="nolist d-flex flex-md-row flex-column text-left text-md-center">
-                                        
-                                        <li><a href="#">Trang chủ</a></li>
-                                        
-                                        <li><a href="#">Tuyển dụng</a></li>
-                                        
-                                        <li><a href="#">Ứng viên</a></li>
-                                        
-                                        <li><a href="#">Công ty</a></li>
-                                        
+        <header id="header">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-xl-3 col-md-2 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="./public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-7 px-0 header-middle order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Việc làm</span>
+                                    <span>Vũng Tàu</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
                                     </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-3  d-md-none d-block order-1 header-toggle px-0">
-                            <a href="#" class="d-block text-md-right text-center" data-toggle-menu="#navbar">
-                                <i class="fa fa-bars fa-lg pr-md-2 pr-0"></i>
-                                <span class="d-block text-md-right text-center">Menu</span>
-                            </a>
-                        </div>
-                    </div>
+                                </aside>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-        </header> -->
+            </div>
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
+                <ul class="d-flex h-100 nolist">
+                    <li class="col-md-6 px-0">
+                        <a href="#">
+                            <i class="fa fa-lg fa-user"></i>
+                            <span>Đăng ký</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-lock"></i>
+                            <span>Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-address-card-o"></i>
+                            <span>Nhập CV</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-file"></i>
+                            <span>Đăng tuyển</span>
+                        </a>
+                    </li>
+            </aside>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
         
 <section class="bg-light pb-3 list--job">
     <div class="container">
@@ -66,100 +115,112 @@
                             </div>
                         </div>
                     </div>
-                    <table class="table col-lg-12">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Tên công việc</th>
-                                <th scope="col" class="deadlinepost">Ngày đăng</th>
-                                <th scope="col" class="deadlinepost">Hết hạn</th>
-                                <th scope="col">Sửa</th>
-                                <th scope="col">Xóa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row">1</td>
-                                <td><a href="#">Tuyển dụng nhân viên kinh doanh</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">2</td>
-                                <td><a href="#">Tuyển dụng nhân viên IT</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">3</td>
-                                <td><a href="#">Tuyển dụng nhân viên văn phòng</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">4</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">5</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">6</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">7</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">8</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">9</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">10</td>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td class="deadlinepost">10/3/2019</td>
-                                <td class="deadlinepost">10/4/2019</td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
-                                <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post" onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table col-lg-12">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Tên công việc</th>
+                                    <th scope="col" class="deadlinepost">Ngày đăng</th>
+                                    <th scope="col" class="deadlinepost">Hết hạn</th>
+                                    <th scope="col">Sửa</th>
+                                    <th scope="col">Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td><a href="#">Tuyển dụng nhân viên kinh doanh</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">2</td>
+                                    <td><a href="#">Tuyển dụng nhân viên IT</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">3</td>
+                                    <td><a href="#">Tuyển dụng nhân viên văn phòng</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">4</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">5</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">6</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">7</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">8</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">9</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">10</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td class="deadlinepost">10/3/2019</td>
+                                    <td class="deadlinepost">10/4/2019</td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-edit-post"></span></a></td>
+                                    <td class="py-2 align-items-center"><a href="#"><span class="icon1-del-post"
+                                                onclick="return confirm('Bạn có muốn xóa bài viết này?')"></span></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,7 +243,7 @@
         <footer id="footer" class="">
     <div class="container py-lg-5 py-md-4 py-3">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
                     <address class="footer-body">
@@ -203,7 +264,7 @@
                     </address>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">Vị trí bản đồ</h2>
                     <iframe
@@ -211,7 +272,7 @@
                         frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">
                         Fanpage
@@ -232,9 +293,11 @@
     </div>
 
     <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
     <script src="./public/js/popper.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
     <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/bootstrap-tagsinput.min.js"></script>
     <script src="./public/js/app.js"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>

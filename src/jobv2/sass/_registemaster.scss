@@ -1,0 +1,140 @@
+.regis-master-page {
+
+    &-title {
+         color: #c0392b;
+    }
+    &-boxleft {
+        background-color: #fff;
+        li {
+            font-size: 15pt;
+            line-height: 2;
+        }
+    }
+    &-boxright {
+        background-color: #fff;
+        img {
+            background-color: red;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .text-opacity {
+            opacity: 0.6;
+            font-size: 13pt;
+        }
+        .text-holder {
+            text-align: left;
+            margin-left: 4rem;
+            @include max-lg {
+                text-align: center;
+                margin-left: 0;
+            }
+            @include max-lg {
+                text-align: left;
+            }
+        }
+        input {
+            width: 100%;
+        }
+    }
+    &-link-login {
+        background-color: #ff5341;
+        color: #fff;
+        font-weight: bold;
+        padding: 6px 25px;
+        border-radius: 4px;
+        border: none;
+        &:hover {
+            background-color: #c0392b;
+            color: #fff;
+        }
+        @include max-sm {
+            padding: 5px 10px;
+            
+        }
+    }
+     &-link-loginfb {
+        background-color: #3865ea;
+        color: #fff;
+        font-weight: bold;
+        padding: 6px 51px;
+        border-radius: 4px;
+        &:hover {
+            background-color: #1f3a8a;
+            color: #fff;
+        }
+        @include max-sm {
+            padding: 5px 10px;
+        }
+    }
+    
+}
+.input-regis-master {
+    position: relative;
+    
+     .li-person {
+        position: absolute;
+        margin-left: -21px;
+        &::before {
+            content: '\f007';
+            font-family: Fontawesome;
+            font-size: 22px;
+            color: #e74c3c;
+        }
+    }
+    .li-user {
+        position: absolute;
+        margin-left: 6px;
+        &::before {
+            content: '\f2bd';
+            font-family: Fontawesome;
+            margin-right: 3px;
+            font-size: 22px;
+            color: #e74c3c;
+        }
+    }
+    .li-key {
+        position: absolute;
+        margin-left: 6px;
+        &::before {
+            content: '\f084';
+            font-family: Fontawesome;
+            margin-right: 3px;
+            font-size: 22px;
+            color: #e74c3c;
+        }
+    }
+    span {
+        font-size: 15pt;
+    }
+    input {
+        width: 300px;
+        margin-bottom: 5px;
+        padding: 0.25rem 0 0.25rem 2.5rem;
+        background-color: #fafafa;
+        border: 1px solid #efefef;
+        border-radius: 3px;
+        @include max-sm {
+            width: 100%;
+        }
+    }
+}
+.hotline {
+    background-color: #19800e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 5px 10px;
+    @include max-sm {
+        font-size: 11pt;
+    }
+}
+.local-regismaster {
+    &-selects {
+        padding: 5px 10px;
+        background-color: #fff;
+    }
+}
+.hotline-phone {
+    font-size: 17pt;
+    color: #f00;
+}

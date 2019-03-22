@@ -8,6 +8,13 @@
         @include max-lg {
             margin-bottom: 1rem;
         }
+        h5{
+            @include max-sm {
+            font-size: 12pt;
+            font-weight: bold;
+            }
+        }
+        
         a {
             color: #000;
             &:hover {
@@ -60,11 +67,30 @@
         padding: 5px 10px;
         border-radius: 4px; 
         font-weight: bold;
+        font-size: 13pt;
     }
 }
-.list--job {
-    td:first-child {
-        text-align: center;
-        font-size: 85%;
+
+thead {
+    @include max-sm {
+
+        font-size: 12pt;
+    }
+}
+tbody {
+    @include max-sm {
+        font-size: 11pt;
+    }
+}
+.table-title {
+    font-size: 13pt;
+}
+table {
+    a {
+        color: #000;
+        &:hover {
+            color: #000;
+            opacity: 0.7;
+        }
     }
 }

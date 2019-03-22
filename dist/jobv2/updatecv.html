@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/font-awesome.css">
     <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
     <link rel="stylesheet" href="./public/css/app.css">
     <title>Create-CV</title>
 </head>
@@ -61,7 +62,7 @@
                     </nav>
                 </div>
             </div>
-            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 px-0">
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
                 <ul class="d-flex h-100 nolist">
                     <li class="col-md-6 px-0">
                         <a href="#">
@@ -102,72 +103,70 @@
     <div class="container">
         <form action="" method="post">
             <div class="porfolio-test">
-                <div class="row bg-success py-lg-4 porfolio-test-1 align-items-center">
-                    <div class="col-md-2 flex-grow-1">
-                        <div class="text-center">
-                            <label class="position-relative avatar">
-                                <img src="http://beta.bienhoagear.com/img/av.jpg" alt="">
-                                <input type="file" name="" id="" hidden>
-                                <div class="text-white upload-text">Chọn ảnh toàn thân</div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-8 ">
-                        <div class="input-seach form-group">
-                            <i class="fa fa-briefcase icons-home" aria-hidden="true"></i>
-                            <input class="w-100" autocomplete="off" placeholder="Nhập Họ Tên">
-                        </div>
-                        <div class="input-seach w-100 input-group">
-                            <i class="fa fa-key icons-home" aria-hidden="true"></i>
-                            <select class="input-select input-seach selectpicker w-100">
-                                <option value="audi" selected disabled>Tất cả ngành nghề</option>
-                                
-                                <option class="input-select-item" value="volvo">Bán hàng</option>
-                                
-                                <option class="input-select-item" value="volvo">Biên Tập/Báo Chí</option>
-                                
-                                <option class="input-select-item" value="volvo">Bảo Hiểm</option>
-                                
-                                <option class="input-select-item" value="volvo">Bảo Vệ</option>
-                                
-                                <option class="input-select-item" value="volvo">Bưu Chính</option>
-                                
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-2 flex-grow-1">
-
-                        <div class="text-center">
-                            <img class="porfolio-test-ava"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIxIUzhnnlKfADYvmlWZXDwltV8u3MHPtfI5kGC50FquW7J93L"
-                                alt="">
-                            <button type="file" class="btn-upload-img mt-2">Chọn ảnh đại diện</button>
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-                <div class="row bg-light py-lg-4 porfolio-test-2">
-                    <div class="col-md-12">
+                <div class="row py-lg-4 porfolio-test-1">
+                    <div class="col-md-3">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 col-6 justify-content-center text-center bg-success mb-lg-3">
+                                <div class="text-center pt-3">
+                                    <label class="position-relative avatar">
+                                        <img src="http://beta.bienhoagear.com/img/av.jpg" alt="">
+                                        <input type="file" name="" id="" hidden>
+                                        <div class="text-white upload-text">Chọn ảnh đại<br> diện</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-6 justify-content-center text-center bg-success">
+                                <div class="text-center pt-3">
+                                    <label class="position-relative avatar">
+                                        <img src="http://beta.bienhoagear.com/img/av.jpg" alt="">
+                                        <input type="file" name="" id="" hidden>
+                                        <div class="text-white upload-text">Chọn ảnh toàn thân</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 flex-grow-1">
+                        <div class="bg-white profile">
+                            <h5 class="text-center mb-0 mt-3 mt-md-0">
+                                <span href="#" class="title-updatecv">Thông Tin Cá Nhân</span>
+                            </h5>
+                            <div class="px-3 pt-3">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group-sm">
+                                            <input class="form-control form-control-sm rounded-0"
+                                                placeholder="Nhập Họ Tên">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 py-2">
                                         <div class="form-group">
-                                            <h5>Ngày sinh:</h5>
-                                            <input class="form-control w-100" type="date" name="bday" max="3000-12-31"
-                                                min="1000-01-01" class="form-control">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Tất cả ngành nghề</option>
+                                                
+                                                <option class="input-select-item" value="volvo">Bán hàng</option>
+                                                
+                                                <option class="input-select-item" value="volvo">Biên Tập/Báo Chí</option>
+                                                
+                                                <option class="input-select-item" value="volvo">Bảo Hiểm</option>
+                                                
+                                                <option class="input-select-item" value="volvo">Bảo Vệ</option>
+                                                
+                                                <option class="input-select-item" value="volvo">Bưu Chính</option>
+                                                
+                                            </select>
                                         </div>
                                     </div>
-
-                                    <div class="col-md-4">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Giới tính:</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group-sm">
+                                            <input class="form-control form-control-sm rounded-0" type="date"
+                                                name="bday" max="3000-12-31" min="1000-01-01"  class="form-control" value="1950-03-31">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Giới Tính</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -178,12 +177,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Ngoại Ngữ</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Ngoại Ngữ</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -194,12 +191,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Thường trú</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Thường Trú</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -210,12 +205,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Hiện Tại</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Hiện Tại</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -226,12 +219,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Hôn Nhân:</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Hôn Nhân</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -242,12 +233,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Trình Độ:</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Trình Độ</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -258,12 +247,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="input-seach w-100 input-group form-group">
-                                            <h5>Tình Trạng</h5>
-                                            <select
-                                                class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
-                                                <option value="audi" selected disabled>Chọn</option>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm rounded-0">
+                                                <option value="audi" selected disabled>Tình Trạng</option>
                                                 
                                                 <option class="input-select-item" value="volvo">Không yêu cầu</option>
                                                 
@@ -274,70 +261,78 @@
                                             </select>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row bg-light py-lg-4 porfolio-test-2">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row bg-light py-lg-4 py-3">
-                    <div class="col-md-6 mb-lg-3">
+                    <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Kỹ Năng</span>
+                                <span href="#" class="title-updatecv">Kỹ Năng</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-lg-3">
+                    <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Phần Mềm Thông Dụng</span>
+                                <span href="#" class="title-updatecv">Phần Mềm Thông Dụng</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-lg-3">
+                    <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Học Vấn</span>
+                                <span href="#" class="title-updatecv">Học Vấn</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-lg-3">
+                    <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Chứng Chỉ Khác</span>
+                                <span href="#" class="title-updatecv">Chứng Chỉ Khác</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-lg-3">
+                    <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Kinh Nghiệm Làm Việc</span>
+                                <span href="#" class="title-updatecv">Kinh Nghiệm Làm Việc</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-lg-3">
+                    <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Các Giải Thưởng Đã Đạt</span>
+                                <span href="#" class="title-updatecv">Các Giải Thưởng Đã Đạt</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
                     <div class="col-md-12 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
-                                <span href="#" class="title-post">Các Giải Thưởng Đã Đạt</span>
+                                <span href="#" class="title-updatecv">Các Giải Thưởng Đã Đạt</span>
                             </h5>
-                            <textarea class="w-100" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
                         </div>
                     </div>
-                    <div class="text-center w-100">
+                    <div class="text-center w-100 py-3">
                         <button type="submit" class="btn-upload">UpLoad</button>
                     </div>
                 </div>
@@ -350,7 +345,7 @@
         <footer id="footer" class="">
     <div class="container py-lg-5 py-md-4 py-3">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
                     <address class="footer-body">
@@ -371,7 +366,7 @@
                     </address>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">Vị trí bản đồ</h2>
                     <iframe
@@ -379,7 +374,7 @@
                         frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">
                         Fanpage
@@ -400,6 +395,7 @@
     </div>
 
     <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
     <script src="./public/js/popper.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
     <script src="./public/js/swiper.min.js"></script>

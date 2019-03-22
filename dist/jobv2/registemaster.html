@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/font-awesome.css">
+    <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <title>Regis-Master</title>
+</head>
+
+<body>
+    <div id="app">
+        <header id="header">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-xl-3 col-md-2 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="./public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-7 px-0 header-middle order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Việc làm</span>
+                                    <span>Vũng Tàu</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
+                                    </ul>
+                                </aside>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
+                <ul class="d-flex h-100 nolist">
+                    <li class="col-md-6 px-0">
+                        <a href="#">
+                            <i class="fa fa-lg fa-user"></i>
+                            <span>Đăng ký</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-lock"></i>
+                            <span>Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-address-card-o"></i>
+                            <span>Nhập CV</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-file"></i>
+                            <span>Đăng tuyển</span>
+                        </a>
+                    </li>
+            </aside>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+        
+<section class="regis-master-page py-lg-5 py-md-4 py-3">
+    <div class="container">
+        <form class="row boxshadow" action="" method="post">
+            <div class="col-lg-7 regis-master-page-boxleft border-right border-muted order-md-0 order-1">
+                <div class="py-lg-4 py-3">
+                    <ul class="nolist list-text text-dark">
+                        <li><i class="fa fa-check-square text-success" aria-hidden="true"></i>
+                            <span>+4000 ứng viên tiếp cận thông tin tuyển dụng</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square text-success" aria-hidden="true"></i>
+                            <span>Hơn 20 hồ sơ ứng tuyển cho 1 việc làm đăng tuyển tại Vuta</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square text-success" aria-hidden="true"></i>
+                            <span>Tăng hiệu quả 4 - 5 lần so với các phương thức tuyển dụng khác</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square text-success" aria-hidden="true"></i>
+                            <span>+200 lượt xem trung bình cho 1 việc làm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center border hotline">
+                        <span class="">Hotline tư vấn dành cho nhà tuyển dụng</span>
+                    </div>
+                    <div class="col-lg-6 col-6 text-center my-2 font-weight-bold py-3">
+                        <span class="hotline-phone">Hotline-1<br>
+                            0909 667 788</span>
+                    </div>
+                    <div class="col-lg-6 col-6 text-center my-2 font-weight-bold py-3">
+                        <span class="hotline-phone">Hotline-2<br>
+                            08 0855 6644</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 regis-master-page-boxright order-0">
+                <div class="input-regis-master py-lg-4 py-3">
+                    <span class="py-3">
+                        <i class="fa fa-user text-info" aria-hidden="true"></i>
+                        <b>Đăng ký tài khoản nhà tuyển dụng</b>
+                    </span>
+                </div>
+                <div class="col-lg-12 border bg-light mb-3">
+                    <div class="py-3 row">
+                        <div class="col-lg-5">
+                            <span class="form-title">Tài khoản email:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <input class="form-control" autocomplete="off" placeholder="">
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập Lại Email</small>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-12 border bg-light">
+                    <div class="py-3 row">
+                        <div class="col-lg-5">
+                            <span class="form-title">Tên người liên hệ:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="">
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập Lại Tên</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 row">
+                        <div class="col-lg-5">
+                            <span class="form-title">Số điện thoại liên hệ:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <input class="form-control" type="number" autocomplete="off" placeholder="">
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập lại số điện thoại</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 row">
+                        <div class="col-lg-5">
+                            <span class="form-title">Tên công ty:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="">
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập lại tên công ty</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 row">
+                        <div class="col-lg-5">
+                            <span class="form-title">Mã số thuế:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <input class="form-control" type="number" autocomplete="off" placeholder="">
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập lại mã số thuế</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 row">
+                        <div class="col-lg-5">
+                            <span class="form-title">Địa chỉ công ty:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="">
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập lại địa chỉ công ty</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 row align-items-center">
+                        <div class="col-lg-5">
+                            <span class="form-title">Tỉnh/thành phố:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <div class="local-regismaster">
+                                <select class="local-regismaster-selects selectpicker form-control w-100">
+                                    <option value="audi" selected disabled>Địa điểm</option>
+                                    
+                                    <option class="input-select-item" value="volvo">TP HCM</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Hà Nội</option>
+                                    
+                                    <option class="input-select-item" value="volvo">BR-VT</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Nha Trang</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Đồng Nai</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="text-left w-100 mx-2">
+                                <small class="text-danger">Nhập lại tỉnh thành phố</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 row align-items-center">
+                        <div class="col-lg-5">
+                            <span>Ghi chú:</span>
+                        </div>
+                        <div class="col-lg-7 px-md-3 px-2">
+                            <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-lg-4 my-3 text-center">
+                    <a href="#"></a>
+                    <button type="submit" class="regis-master-page-link-login">Đăng ký nhà tuyển dụng</button>
+                </div>
+                <div class="row text-center justify-content-center py-2">
+                    <p>Bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+        <footer id="footer" class="">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="footer-block">
+                    <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
+                    <address class="footer-body">
+                        
+                        <div class="address-footer">
+                            <p>Trụ sở chính: Tầng 3, Edyco building, 102A Lê Hồng Phong, Phường 7, Thành phố Vũng Tàu.</p>
+                            <dl>
+                                <dd>
+                                    <strong class="mr-1">Điện thoại</strong>
+                                    <a href="tel:0909556677">0909556677</a>
+                                </dd>
+                                <dd>
+                                    <strong class="mr-1">Email</strong>
+                                    <a href="mailto:hotro@vuta.com.vn">hotro@vuta.com.vn</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">Vị trí bản đồ</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.782451494951!2d107.07653895092606!3d10.35927226954976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756ff34707b7ad%3A0x57f311cbed9ff724!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIFZVVEFURUNI!5e0!3m2!1svi!2s!4v1552276979911"
+                        frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">
+                        Fanpage
+                    </h2>
+                    <div class="fb-page footer-body" data-href="https://www.facebook.com/zillmaphongba/" data-tabs="timeline"
+                        data-width="500" data-height="200" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/zillmaphongba/" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/zillmaphongba/">Live
+                                Game mobile</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <div id="overlay"></div>
+    </div>
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
+    <script src="./public/js/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>
+</body>
+
+</html>

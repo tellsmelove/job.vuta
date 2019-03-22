@@ -1,0 +1,114 @@
+.login-page {
+    padding-top: 2rem;
+    &-title {
+        color: #55c304;
+        font-weight: bold;
+        @include max-sm {
+            color: #55c304;
+            font-weight: bold;
+            font-size: 22pt;
+            text-align: center;
+        }
+    }
+    &-boxleft {
+        background-color: #fff;
+        li {
+            // color: #55c304;
+            font-size: 15pt;
+            line-height: 2;
+            &::before {
+                content: '\f0da';
+                font-family: Fontawesome;
+                margin-right: 5px;
+                font-size: 16px;
+            }
+        }
+        @include max-sm {
+            background-color: #fff;
+            border-right: none!important;
+        }
+    }
+    &-boxright {
+        background-color: #fff;
+        @include max-sm {
+            border-radius: 5px;
+        }
+        img {
+            max-width: 200px;
+        }
+        .text-opacity {
+            opacity: 0.6;
+        }
+    }
+    &-link-login {
+        background-color: #ff5341;
+        color: #fff;
+        font-weight: bold;
+        padding: 6px 20px;
+        border-radius: 4px;
+        border: none;
+        &:hover {
+            background-color: #c0392b;
+            color: #fff;
+        }
+        @include max-sm {
+            padding: 5px 10px;
+        }
+    }
+     &-link-loginfb {
+        background-color: #3865ea;
+        color: #fff;
+        font-weight: bold;
+        padding: 6px 51px;
+        border-radius: 4px;
+        &:hover {
+            background-color: #1f3a8a;
+            color: #fff;
+        }
+        @include max-sm {
+            padding: 5px 10px;
+        }
+    }
+    
+}
+.form-group {
+    position: relative;
+    .icon-person {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        font-size: 15pt;
+        color: red;
+        transform: translateY(-50%);
+        .form-control:valid{
+            border-color: red;
+        }
+    }
+    .li-key {
+        position: absolute;
+        top: 2px;
+        margin-left: 6px;
+        &::before {
+            content: '\f084';
+            font-family: Fontawesome;
+            margin-right: 3px;
+            font-size: 22px;
+            color: #e74c3c;
+        }
+    }
+    &-user {
+        margin-bottom: 5px;
+        padding: 0.25rem 0 0.25rem 2.5rem;
+        background-color: #fafafa;
+        border: 1px solid #efefef;
+        border-radius: 3px;
+        @include max-sm {
+            width: auto;
+        }
+    }
+}
+.list-text {
+    @include max-sm {
+        display: none;
+    }
+}

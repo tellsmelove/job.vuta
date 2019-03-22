@@ -4,6 +4,9 @@ var sub_menu = document.getElementById('sub-menu');
 var toggle_menu = document.getElementById('toggle');
 var overlay = document.getElementById('overlay');
 $(document).ready(() => {
+    require('./make_tag');
+    require('./filters');
+    
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
         let navbar = document.getElementById('navbar');
@@ -98,19 +101,13 @@ $(document).ready(() => {
             slidesPerView: 3,
             direction: 'vertical',
             simulateTouch: false,
+            autoplay: {
+                delay: 5000,
+            },
             breakpoints: {
                 320: {
                     slidesPerView: 1,
                     spaceBetween: 10,
-                    direction: 'horizontal',
-                    simulateTouch: true,
-                    autoplay: {
-                        delay: 5000,
-                    },
-                },
-                480: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
                     direction: 'horizontal',
                     simulateTouch: true,
                     autoplay: {
@@ -126,12 +123,17 @@ $(document).ready(() => {
                         delay: 5000,
                     },
                 },
-                767: {
+                768: {
                     slidesPerView: 3,
                     spaceBetween: 20,
                     direction: 'vertical',
                     simulateTouch: false,
-
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    direction: 'vertical',
+                    simulateTouch: false,
                 },
             }
         });
@@ -145,4 +147,3 @@ function outSideClick(target){
         overlay.removeAttribute('style')
     }, 200);
 }
-

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/font-awesome.css">
     <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
     <link rel="stylesheet" href="./public/css/app.css">
     <title>Detail-Person</title>
 </head>
@@ -61,7 +62,7 @@
                     </nav>
                 </div>
             </div>
-            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 px-0">
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
                 <ul class="d-flex h-100 nolist">
                     <li class="col-md-6 px-0">
                         <a href="#">
@@ -101,7 +102,7 @@
 <section class="person py-lg-4 py-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-6 p-md-0 order-1">
+            <div class="col-md-2 col-6 p-md-0 order-1 mb-3 mb-md-0">
                 <div class="post-item border">
                     <h5 class="border-bottom text-center mb-0">
                         <a href="#" class="title-post">Ảnh Đại Diện</a>
@@ -116,30 +117,130 @@
                     <h5 class="border-bottom text-center mb-0">
                         <a href="#" class="title-post">Thông Tin Ứng Viên</a>
                     </h5>
-                    <div class="d-flex flex-wrap portfolio px-md-3 flex-grow-1">
+                    <div class="d-flex flex-wrap portfolio flex-grow-1 m-0">
                         <div class="col-md-6">
-                            <ul class="nolist">
-                                <li><span>Họ Tên</span><span><b class="text-danger">NGUYỄN ĐÌNH TIẾN</b></span></li>
-                                <li><span>Ngành Nghề</span><span>Marketing - Thiết kế - Lập Trình Tài Chính - Sale - Google Aw</span></li>
-                                <li><span>Trình Độ</span><span>Đại Học</span></li>
-                                <li><span>Ngoại Ngữ</span><span>Tiếng Anh</span></li>
-                                <li><span>Tình Trạng</span><span>Đã có việc làm</span></li>
-                            </ul>
+                            <div class="row h-100">
+                                <div class="col-12">
+                                    <div class="row info-line">
+                                        <div class="col">
+                                            <span class="info-title">Họ Tên</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content-name">NGUYỄN ĐÌNH TIẾN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row info-line">
+                                        <div class="col-12">
+                                            <span class="info-title">Ngành Nghề</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>Marketing - Thiết kế - Lập Trình Tài Chính - Sale - Google Aw</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Trình Độ</span>
+                                        </div>
+                                        <div class="col">
+                                            <span>Đại Học</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Ngoại Ngữ</span>
+                                        </div>
+                                        <div class="col">
+                                            <span>Tiếng Anh</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="info-title">Tình Trạng</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">Đã có việc làm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <ul class="nolist portfolio-right">
-                                <li><span>Ngày Sinh</span><span>03/04/1990</span></li>
-                                <li><span>Giới Tính</span><span>Nam</span></li>
-                                <li><span>Hôn Nhân</span><span>Chưa kết hôn</span></li>
-                                <li><span>Thường trú</span><span>Bà Rịa</span></li>
-                                <li><span>Hiện Tại</span><span>Vũng Tàu</span></li>
-                                <li><span>Ngày cập nhật</span><span>19/3/2019</span></li>
-                            </ul>
+                            <div class="row  border-left h-100">
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Ngày Sinh</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">03/04/1990</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Giới Tính</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">Nam</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Hôn Nhân</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">Chưa kết hôn</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Thường trú</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">Bà Rịa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row  info-line">
+                                        <div class="col">
+                                            <span class="info-title">Hiện Tại</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">Vũng Tàu</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="info-title">Ngày cập nhật</span>
+                                        </div>
+                                        <div class="col">
+                                            <span class="info-content">19/3/2019</span>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-6 p-md-0 or-2 order-md-3">
+            <div class="col-md-2 col-6 p-md-0 or-2 order-md-3 mb-3 mb-md-0">
                 <div class="post-item border">
                     <h5 class="border-bottom text-center mb-0">
                         <a href="#" class="title-post">Ảnh Toàn Thân</a>
@@ -224,65 +325,71 @@
 </section>
 <section class="plus-content py-lg-4 py-3">
     <div class="container">
-        <p class="content-plus">
-            <a class="btn btn-secondary font-weight-bold w-100" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                aria-controls="collapseExample">
-                <span>Thông tin thêm</span>
-                <i class="fa fa-sort-desc text-right" aria-hidden="true"></i>
-            </a>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Nội dung có thể là link Video trong khung chiếu Video
+        <div class="row">
+            <div class="col p-md-0">
+                <p class="content-plus">
+                    <a class="btn btn-secondary font-weight-bold w-100" data-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <span>Thông tin thêm</span>
+                        <i class="fa fa-sort-desc text-right" aria-hidden="true"></i>
+                    </a>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Nội dung có thể là link Video trong khung chiếu Video
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <section class="bannerQC py-lg-4 py-3">
     <div class="container three-banner ">
-        <div class="swiper-container swiper-person text-center">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" target="_blank"><img
-                            src="http://blog.cosine-inn.com/wp-content/uploads/2013/05/cropped-cosine-banner-6-330x250.jpg"
-                            alt=""></a>
+        <div class="row">
+            <div class="swiper-container swiper-person text-center">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank"><img
+                                src="http://blog.cosine-inn.com/wp-content/uploads/2013/05/cropped-cosine-banner-6-330x250.jpg"
+                                alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank"><img
+                                src="https://www.itsecurityguru.org/wp-content/uploads/2017/07/security-serious-banner-330x280-330x250.png"
+                                alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank"><img
+                                src="http://www.woorockets.com/wp-content/uploads/2017/01/banner-to-product-lines-330x250.png"
+                                alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blanl"><img
+                                src="https://2.bp.blogspot.com/-DKhksSLoIL4/XGKZLdZwNbI/AAAAAAAAQf0/84uvBvR-k8MWpIsPGY9MxV2IaatVsYGtwCLcBGAs/s1600/bread-breakfast-bun-1633525%2B%25281%2529.jpg"
+                                alt=""></a>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <a href="#" target="_blank"><img
-                            src="https://www.itsecurityguru.org/wp-content/uploads/2017/07/security-serious-banner-330x280-330x250.png"
-                            alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" target="_blank"><img
-                            src="http://www.woorockets.com/wp-content/uploads/2017/01/banner-to-product-lines-330x250.png"
-                            alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" target="_blanl"><img
-                            src="https://2.bp.blogspot.com/-DKhksSLoIL4/XGKZLdZwNbI/AAAAAAAAQf0/84uvBvR-k8MWpIsPGY9MxV2IaatVsYGtwCLcBGAs/s1600/bread-breakfast-bun-1633525%2B%25281%2529.jpg"
-                            alt=""></a>
-                </div>
+                <div class="swiper-pagination pagination-person"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination pagination-person"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </section>
 <section class="py-lg-4 py-3">
     <div class="container">
         <div class="row text-center">
-            <div class="col-md-4 btn-backlink">
+            <div class="col-md-4 btn-backlink p-md-0">
                 <div class="btn-backlink_primary">
                     <a href="#">Lưu CV</a>
                 </div>
             </div>
-            <div class="col-md-4 btn-backlink">
+            <div class="col-md-4 btn-backlink p-md-0">
                 <div class="btn-backlink_secondary">
                     <a href="#">Trở Về Trang Ứng Viên</a>
                 </div>
             </div>
-            <div class="col-md-4 btn-backlink">
+            <div class="col-md-4 btn-backlink p-md-0">
                 <div class="btn-backlink_info">
                     <a href="#">Số Điện Thoại Ứng Viên</a>
                 </div>
@@ -294,7 +401,7 @@
         <footer id="footer" class="">
     <div class="container py-lg-5 py-md-4 py-3">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
                     <address class="footer-body">
@@ -315,7 +422,7 @@
                     </address>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">Vị trí bản đồ</h2>
                     <iframe
@@ -323,7 +430,7 @@
                         frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">
                         Fanpage
@@ -344,6 +451,7 @@
     </div>
 
     <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
     <script src="./public/js/popper.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
     <script src="./public/js/swiper.min.js"></script>

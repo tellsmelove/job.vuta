@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/font-awesome.css">
+    <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-tagsinput.min.css">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <title>post-employer</title>
+</head>
+
+<body>
+    <div id="app">
+        <header id="header">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-xl-3 col-md-2 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="./public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-7 px-0 header-middle order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Việc làm</span>
+                                    <span>Vũng Tàu</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
+                                    </ul>
+                                </aside>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
+                <ul class="d-flex h-100 nolist">
+                    <li class="col-md-6 px-0">
+                        <a href="#">
+                            <i class="fa fa-lg fa-user"></i>
+                            <span>Đăng ký</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-lock"></i>
+                            <span>Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-address-card-o"></i>
+                            <span>Nhập CV</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-file"></i>
+                            <span>Đăng tuyển</span>
+                        </a>
+                    </li>
+            </aside>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+        
+<section class="bg-light py-lg-5 py-md-4 py-3">
+    <div class="container bg-white rounded">
+        <form action="" method="post">
+            <h3 class="title-box">THÔNG TIN CÔNG VIỆC</h3>
+            <div class="row pb-3">
+                <div class="col-lg-8">
+                    <div class="row h-100">
+                        <div class="col-lg-12 py-2">
+                            <div class="pb-2">
+                                <span class="form-title font-weight-bold">Chức danh</span>
+
+                            </div>
+                            <input type="text" class="form-control form-control-pd" placeholder="Tuyển dụng nhân viên kinh doanh, marketing...">
+                        </div>
+                        <div class="col-lg-12 py-2">
+                            <div class="pb-2">
+                                <span class="form-title font-weight-bold">Mô tả</span>
+
+                            </div>
+                            <textarea name="description" id="descript" class="w-100 form-control" rows="10"></textarea>
+                        </div>
+                        <div class="col-lg-12 py-2">
+                            <div class="pb-2">
+                                <span class="form-title font-weight-bold">Quyền lợi được hưởng</span>
+
+                            </div>
+                            <textarea name="description" id="descript" class="w-100 form-control" rows="10"></textarea>
+                        </div>
+                        <div class="col-lg-6 py-2">
+                            <div class="pb-2">
+                                <span class="form-title font-weight-bold">Loại việc làm</span>
+
+                            </div>
+                            <div class="input-seach w-100">
+                                <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                                    <option value="audi" selected disabled>Chọn</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Việc làm quản lý</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Việc làm văn phòng</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Việc làm phổ thông</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Việc làm thời vụ</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Việc làm part time</option>
+                                    
+                                    <option class="input-select-item" value="volvo">Việc làm ngoài giờ</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 py-2">
+                            <div class="pb-2">
+                                <span class="form-title font-weight-bold">Số lượng</span>
+
+                            </div>
+                            <div class="input-seach w-100">
+                                <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                                    <option value="audi" selected disabled>Chọn</option>
+                                    
+                                    <option class="input-select-item" value="volvo">1</option>
+                                    
+                                    <option class="input-select-item" value="volvo">2</option>
+                                    
+                                    <option class="input-select-item" value="volvo">3</option>
+                                    
+                                    <option class="input-select-item" value="volvo">4</option>
+                                    
+                                    <option class="input-select-item" value="volvo">5</option>
+                                    
+                                    <option class="input-select-item" value="volvo">6</option>
+                                    
+                                    <option class="input-select-item" value="volvo">7</option>
+                                    
+                                    <option class="input-select-item" value="volvo">8</option>
+                                    
+                                    <option class="input-select-item" value="volvo">9</option>
+                                    
+                                    <option class="input-select-item" value="volvo">10</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="py-2">
+                        <div class="pb-2">
+                            <span class="form-title font-weight-bold">Mức lương</span>
+
+                        </div>
+                        <div class="py-3 px-3 form-box form-check">
+                            <input id="1" type="radio" name="gender" value="male"><label for="1"><span>1 - 3 Triệu</span></label><br>
+                            <input id="2" type="radio" name="gender" value="male"><label for="2"><span>3 - 5 Triệu</span></label><br>
+                            <input id="3" type="radio" name="gender" value="male"><label for="3"><span>5 - 7 Triệu</span></label><br>
+                            <input id="4" type="radio" name="gender" value="male"><label for="4"><span>7 - 10 Triệu</span></label><br>
+                            <input id="5" type="radio" name="gender" value="male"><label for="5"><span>10 - 15 Triệu</span></label><br>
+                            <input id="6" type="radio" name="gender" value="male"><label for="6"><span>Hơn 20 Triệu</span></label><br>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <div class="pb-2">
+                            <span class="form-title font-weight-bold">Ngành nghề</span>
+
+                        </div>
+                        <div class="p-3 form-box-filter">
+                            <input id="myInput" type="text" placeholder=" Search.." class="py-2 mb-2 w-100 form-control form-control-ps">
+                            <ul id="xyz" class="nolist border form-check p-3">
+                                <li>
+                                    <input id="career-1" type="checkbox" class="career-check" name="gender" value="male"><label for="career-1"><span>Lập
+                                        trình Mobile</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-2" type="checkbox" class="career-check" name="gender" value="male"><label for="career-2"><span>Lập
+                                        trình Web</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-3" type="checkbox" class="career-check" name="gender" value="male"><label for="career-3"><span>Lập
+                                        trình C#</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-4" type="checkbox" class="career-check" name="gender" value="male"><label for="career-4"><span>Lập
+                                        trình Python</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-5" type="checkbox" class="career-check" name="gender" value="male"><label for="career-5"><span>Lập
+                                        trình Java</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-6" type="checkbox" class="career-check" name="gender" value="male"><label for="career-6"><span>Lập
+                                        trình iOS</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-7" type="checkbox" class="career-check" name="gender" value="male"><label for="career-7"><span>Digital marketing</span></label>
+                                </li>
+                                <li>
+                                    <input id="career-8" type="checkbox" class="career-check" name="gender" value="male"><label for="career-8"><span>Bất động sản</span></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <div class="border border-muted rounded w-100">
+                            <div class="box-title form-title pl-3 pr-3 pt-3 font-weight-bold">
+                                <b>Vị trí tuyển dụng</b><br>
+                                <small class="text-muted">Nhập text sau đó (,) hoặc Enter để tạo tag</small>
+                            </div>
+                            <input id="tags-input" type="text" class="form-control w-100 form-tags" data-role="tagsinput" placeholder="quản trị kinh doanh,seo,...">
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <div class="pb-2">
+                            <span class="form-title font-weight-bold">Loại hình công việc</span>
+
+                        </div>
+                        <div class="p-3 form-box form-check">
+                            <input id="job-1" type="checkbox" name="gender" value="male"><label for="job-1"><span>Toàn thời gian cố định</span></label><br>
+                            <input id="job-2" type="checkbox" name="gender" value="male"><label for="job-2"><span>Toàn thời gian tạm thời</span></label><br>
+                            <input id="job-3" type="checkbox" name="gender" value="male"><label for="job-3"><span>Bán thời gian cố định</span></label><br>
+                            <input id="job-4" type="checkbox" name="gender" value="male"><label for="job-4"><span>Bán thời gian tạm thời</span></label><br>
+                            <input id="job-5" type="checkbox" name="gender" value="male"><label for="job-5"><span>Thực tập</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="title-box border-top border-muted">YÊU CẦU CÔNG VIỆC</h3>
+            <div class="row py-3">
+                <div class="col-lg-4 py-2">
+                    <span class="font-weight-bold form-title-secondary">Kinh nghiệm</span>
+                    <div class="input-seach w-100 ">
+                        <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                            <option value="audi" selected disabled>Chọn</option>
+                            
+                            <option class="input-select-item" value="volvo">Chưa có kinh nghiệm</option>
+                            
+                            <option class="input-select-item" value="volvo">Dưới 1 năm</option>
+                            
+                            <option class="input-select-item" value="volvo">1 năm</option>
+                            
+                            <option class="input-select-item" value="volvo">2 năm</option>
+                            
+                            <option class="input-select-item" value="volvo">3 năm</option>
+                            
+                            <option class="input-select-item" value="volvo">4 năm</option>
+                            
+                            <option class="input-select-item" value="volvo">&gt; 5 năm</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-2">
+                    <span class="font-weight-bold form-title-secondary">Bằng cấp</span>
+                    <div class="input-seach w-100 input-group">
+                        <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                            <option value="audi" selected disabled>Chọn</option>
+                            
+                            <option class="input-select-item" value="volvo">Lao động phổ thông</option>
+                            
+                            <option class="input-select-item" value="volvo">Trung học</option>
+                            
+                            <option class="input-select-item" value="volvo">Trung cấp</option>
+                            
+                            <option class="input-select-item" value="volvo">Cao đẳng</option>
+                            
+                            <option class="input-select-item" value="volvo">Đại học</option>
+                            
+                            <option class="input-select-item" value="volvo">Trên đại học</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-2">
+                    <span class="font-weight-bold form-title-secondary">Giới tính</span>
+                    <div class="input-seach w-100 input-group">
+                        <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                            <option value="audi" selected disabled>Chọn</option>
+                            
+                            <option class="input-select-item" value="volvo">Không yêu cầu</option>
+                            
+                            <option class="input-select-item" value="volvo">Nam</option>
+                            
+                            <option class="input-select-item" value="volvo">Nữ</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-2">
+                    <div class="pb-2">
+                        <span class="form-title font-weight-bold form-title-secondary">Hạn nộp hồ sơ (Tối đa 90 ngày)</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control form-control-ps" value="1950-03-31">
+                    </div>
+                </div>
+                <div class="col-lg-4 py-2">
+                    <div class="mb-2">
+                        <span class="font-weight-bold form-title-secondary">Ngôn ngữ hồ sơ</span>
+                    </div>
+                    <div class="input-seach w-100 input-group">
+                        <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                            <option value="audi" selected disabled>Chọn</option>
+                            
+                            <option class="input-select-item" value="volvo">Tiếng việt</option>
+                            
+                            <option class="input-select-item" value="volvo">Tiếng Anh</option>
+                            
+                            <option class="input-select-item" value="volvo">Tiếng Thái Lan</option>
+                            
+                            <option class="input-select-item" value="volvo">Tiếng Pháp</option>
+                            
+                            <option class="input-select-item" value="volvo">Tiếng Tây Ban Nha</option>
+                            
+                            <option class="input-select-item" value="volvo">Tiếng Nga</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-2">
+                    <div class="pb-2">
+                        <span class="form-title font-weight-bold">Địa điểm làm việc</span>
+
+                    </div>
+                    <div class="input-seach w-100 input-group">
+                        <select class="input-select pl-0 input-seach selectpicker w-100 form-control p-0 form-control-ps">
+                            <option value="audi" selected disabled>Địa điểm</option>
+                            
+                            <option class="input-select-item" value="volvo">TP HCM</option>
+                            
+                            <option class="input-select-item" value="volvo">Hà Nội</option>
+                            
+                            <option class="input-select-item" value="volvo">BR-VT</option>
+                            
+                            <option class="input-select-item" value="volvo">Nha Trang</option>
+                            
+                            <option class="input-select-item" value="volvo">Đồng Nai</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-2">
+                    <div class="pb-2">
+                        <span class="form-title font-weight-bold">Yêu cầu công việc</span>
+
+                    </div>
+                    <textarea name="description" id="descript" class="w-100 form-control" rows="6"></textarea>
+                </div>
+                <div class="col-lg-6 py-2">
+                    <div class="pb-2">
+                        <span class="font-weight-bold form-title-secondary">Yêu cầu hồ sơ</span>
+                    </div>
+                    <textarea name="description" id="descript" class="w-100 form-control" rows="6">- Đơn xin việc.
+- Sơ yếu lý lịch.
+- Hộ khẩu, chứng minh nhân dân và giấy khám sức khỏe.
+- Các bằng cấp có liên quan.</textarea>
+                </div>
+            </div>
+            <h3 class="title-box border-top border-muted">THÔNG TIN LIÊN HỆ</h3>
+            <div class="row">
+                <div class="col-lg-12 py-2">
+                    <span class="form-title font-weight-bold">Người liên hệ</span>
+                    <input type="text" class="form-control form-control-pd" placeholder="vd: nguyễn văn mười">
+                </div>
+                <div class="col-lg-6 py-2">
+                    <span class="form-title font-weight-bold">Email liên hệ</span>
+                    <input type="email" class="form-control form-control-pd" placeholder="email...">
+                </div>
+                <div class="col-lg-6 py-2">
+                    <span class="form-title font-weight-bold">Số điện thoại liên hệ</span>
+                    <input type="number" class="form-control form-control-pd" placeholder="+84">
+                </div>
+                <div class="col-lg-12 text-right py-4">
+                    <button type="text" class="link-lose-form">Bỏ qua</button>
+                    <button type="submit" class="link-post-form">Đăng tuyển dụng</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+        <footer id="footer" class="">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="footer-block">
+                    <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
+                    <address class="footer-body">
+                        
+                        <div class="address-footer">
+                            <p>Trụ sở chính: Tầng 3, Edyco building, 102A Lê Hồng Phong, Phường 7, Thành phố Vũng Tàu.</p>
+                            <dl>
+                                <dd>
+                                    <strong class="mr-1">Điện thoại</strong>
+                                    <a href="tel:0909556677">0909556677</a>
+                                </dd>
+                                <dd>
+                                    <strong class="mr-1">Email</strong>
+                                    <a href="mailto:hotro@vuta.com.vn">hotro@vuta.com.vn</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">Vị trí bản đồ</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.782451494951!2d107.07653895092606!3d10.35927226954976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756ff34707b7ad%3A0x57f311cbed9ff724!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIFZVVEFURUNI!5e0!3m2!1svi!2s!4v1552276979911"
+                        frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">
+                        Fanpage
+                    </h2>
+                    <div class="fb-page footer-body" data-href="https://www.facebook.com/zillmaphongba/" data-tabs="timeline"
+                        data-width="500" data-height="200" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/zillmaphongba/" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/zillmaphongba/">Live
+                                Game mobile</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <div id="overlay"></div>
+    </div>
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
+    <script src="./public/js/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/bootstrap-tagsinput.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>
+</body>
+
+</html>

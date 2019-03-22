@@ -1,0 +1,75 @@
+.box-login {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px #dee2e6;
+    margin-right: 2px;
+    outline: 1px solid transparent;
+    outline-offset: 7px;
+    transition: .4s ease all;
+    &:hover {
+        outline-color: #c0392b;
+        outline-offset: 2px;
+    }
+    &-top {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    &-link {
+        background-color: #e74c3c;
+        color: #fff;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px;
+        &:hover{
+            color: #fff;
+            background-color: #c0392b;
+            transition: .3s ease-out all;
+        }
+        span {
+            &::before {
+                content: '\f0e0';
+                font-family: Fontawesome;
+                margin-right: 5px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.list-join-job {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px #dee2e6;
+}
+.list-join-items {
+    &:hover {
+        background-color: #e9ebec;
+    }
+    a{
+        color: #c0392b; 
+        font-size: 14pt;
+        &:hover {
+            color: orangered;
+            
+        }
+    }
+
+
+}
+.deadtime-job {
+    @include max-sm {
+        display: none;
+    }
+}
+table {
+    a {
+        color: #000;
+        &:hover {
+            color: green;
+        }
+    }
+    .company-job, .timeline-job, .status-job {
+        opacity: 0.7;
+    }
+    .money-job {
+        color: #c0392b;
+    }
+}

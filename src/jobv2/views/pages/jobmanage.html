@@ -1,0 +1,214 @@
+{% extends 'layouts/default.html' %}
+
+{% block title %}manage{% endblock %}
+
+{% block content %}
+<section class="bg-white py-3">
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-light">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Job-manage</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+<section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-dark">Việc Làm Quản Lý</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1">
+                                <option>Lương</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1">
+                                <option>Địa Điểm</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1">
+                                <option>Giới</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="job-manage bg-light py-lg-4 py-3">
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <div class=" col-lg-9 col-md-12 mt-3">
+                <div class="row align-items-center mb-3 pb-3 job-manage__list">
+                    <div class="col-md-3 mt-3 mb-2">
+                        <div class="card">
+                            <div class="card-thumb-company">
+                                <a href="#">
+                                    <img class="card-img-top" src="{{img('logo-manhhung.jpg')}}" alt="Card image cap">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col">
+                            <a href="#" class="job-manage__title">Tuyển dụng quản lí nhà hàng City</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="job-manage__company">City Tower Nam Kỳ Khởi Nghĩa</a>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">Nam/Nữ</a></span>
+                            <span><a class="post-tags p-1" href="#">02</a></span>
+                            <span><a class="post-tags p-1" href="#">BR-VT</a></span>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">7.000.000đ - 10.000.000đ</a></span>
+                            <span><a class="post-tags p-1" href="#">ĐH</a></span>
+                            <span><a class="post-tags p-1" href="#">18-4-2019</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-3 pb-3 job-manage__list">
+                    <div class="col-md-3 mt-3 mb-2">
+                        <div class="card">
+                            <div class="card-thumb-company">
+                                <a href="#">
+                                    <img class="card-img-top" src="{{img('logo-hoangphat.png')}}" alt="Card image cap">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col">
+                            <a href="#" class="job-manage__title">Tuyển dụng quản lí nhà hàng City</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="job-manage__company">City Tower Nam Kỳ Khởi Nghĩa</a>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">Nam/Nữ</a></span>
+                            <span><a class="post-tags p-1" href="#">02</a></span>
+                            <span><a class="post-tags p-1" href="#">BR-VT</a></span>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">7.000.000đ - 10.000.000đ</a></span>
+                            <span><a class="post-tags p-1" href="#">ĐH</a></span>
+                            <span><a class="post-tags p-1" href="#">18-4-2019</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-3 pb-3 job-manage__list">
+                    <div class="col-md-3 mt-3 mb-2">
+                        <div class="card">
+                            <div class="card-thumb-company">
+                                <a href="#">
+                                    <img class="card-img-top" src="{{img('thang-long-1108.jpg')}}" alt="Card image cap">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col">
+                            <a href="#" class="job-manage__title">Tuyển dụng quản lí nhà hàng City</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="job-manage__company">City Tower Nam Kỳ Khởi Nghĩa</a>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">Nam/Nữ</a></span>
+                            <span><a class="post-tags p-1" href="#">02</a></span>
+                            <span><a class="post-tags p-1" href="#">BR-VT</a></span>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">7.000.000đ - 10.000.000đ</a></span>
+                            <span><a class="post-tags p-1" href="#">ĐH</a></span>
+                            <span><a class="post-tags p-1" href="#">18-4-2019</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-3 pb-3 job-manage__list">
+                    <div class="col-md-3 mt-3 mb-2">
+                        <div class="card">
+                            <div class="card-thumb-company">
+                                <a href="#">
+                                    <img class="card-img-top" src="{{img('dongtam.jpg')}}" alt="Card image cap">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col">
+                            <a href="#" class="job-manage__title">Tuyển dụng quản lí nhà hàng City</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="job-manage__company">City Tower Nam Kỳ Khởi Nghĩa</a>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">Nam/Nữ</a></span>
+                            <span><a class="post-tags p-1" href="#">02</a></span>
+                            <span><a class="post-tags p-1" href="#">BR-VT</a></span>
+                        </div>
+                        <div class="col">
+                            <span><a class="post-tags p-1" href="#">7.000.000đ - 10.000.000đ</a></span>
+                            <span><a class="post-tags p-1" href="#">ĐH</a></span>
+                            <span><a class="post-tags p-1" href="#">18-4-2019</a></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <nav aria-label="Page navigation example ">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="col-lg-3 col-md-12 mt-3 bannerqc">
+                <div class="row sticky">
+                    <div class="col-lg-12 col-md-6 mb-3 pr-0">
+                        <img class="bannerqc-items w-100" src="http://3.bp.blogspot.com/-Ic_66gGYGKg/VP_sdBGVOaI/AAAAAAAABUw/inI4Z7CQ8d0/s1600/banner%2Bdep.jpg"
+                            alt="">
+                    </div>
+                    <div class="col-lg-12 col-md-6 pr-0">
+                        <img class="bannerqc-items w-100" src="http://3.bp.blogspot.com/-Ic_66gGYGKg/VP_sdBGVOaI/AAAAAAAABUw/inI4Z7CQ8d0/s1600/banner%2Bdep.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner-course bg-light py-lg-4 py-3">
+    <div class="container ">
+        <img class="w-100   " src="http://www.timvieclamtaitphcm.com/publicimages/photos/BANNER.png" alt="">
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,50 @@
+.bannerqc {
+    @include max-sm {
+        display: none;
+    }
+    &-items {
+        height: 350px;
+        @include max-md {
+            height: 150px;
+        }
+    }
+}
+.job-manage {
+    &__list {
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        &:hover {
+            border: 1px solid #a9acaf;
+            box-shadow: 2px 2px 2px #a9acaf;
+            transition: .3s ease-out all;
+        }
+    }
+     &__title {
+        font-size: 15pt;
+        color: #c0392b;
+        &:hover{
+        color: orangered;
+        }
+    }
+    &__company {
+        font-size: 13pt;
+        color: #999;
+         &:hover{
+             color: #2f3640;
+        }
+    }
+}
+.company-link, .job-link {
+    color: #000000;
+    &:hover {
+        color: orange;
+    }
+}
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+.breadcrumb {
+    background-color: #fff;
+}

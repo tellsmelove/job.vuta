@@ -13,7 +13,6 @@
     }
     #logo{
         @include md{
-            padding-left: 0;
             padding-right: 0;
             a{
                 height: 100%;
@@ -161,6 +160,9 @@
     background-color: #4CAF50;
 }
 #sub-menu{
+    @include max-sm {
+        padding: 0;
+    }
     @include max-md{
         position: fixed;
         bottom: -100%;

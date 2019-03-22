@@ -8,148 +8,197 @@
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/font-awesome.css">
     <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-tagsinput.min.css">
     <link rel="stylesheet" href="./public/css/app.css">
     <title>Company</title>
 </head>
 
 <body>
     <div id="app">
-        <!-- <header id="header">
-            <header id="header" class="header-login">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-9 header-logo bg-light">
-                            <a href="#" class="d-block h-100">
-                                <img src="./public/images/ant-logo2.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-10 px-0 order-md-1 order-2 text-right">
-                            <div class="d-md-inline-flex flex-column h-100">
-                                <nav class="header-navbar" id="navbar">
-                                    <ul class="nolist d-flex flex-md-row flex-column text-left text-md-center">
-                                        
-                                        <li><a href="#">Trang chủ</a></li>
-                                        
-                                        <li><a href="#">Tuyển dụng</a></li>
-                                        
-                                        <li><a href="#">Ứng viên</a></li>
-                                        
-                                        <li><a href="#">Công ty</a></li>
-                                        
+        <header id="header">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-xl-3 col-md-2 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="./public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-7 px-0 header-middle order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Việc làm</span>
+                                    <span>Vũng Tàu</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
                                     </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-3  d-md-none d-block order-1 header-toggle px-0">
-                            <a href="#" class="d-block text-md-right text-center" data-toggle-menu="#navbar">
-                                <i class="fa fa-bars fa-lg pr-md-2 pr-0"></i>
-                                <span class="d-block text-md-right text-center">Menu</span>
-                            </a>
-                        </div>
-                    </div>
+                                </aside>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-        </header> -->
+            </div>
+            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
+                <ul class="d-flex h-100 nolist">
+                    <li class="col-md-6 px-0">
+                        <a href="#">
+                            <i class="fa fa-lg fa-user"></i>
+                            <span>Đăng ký</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-lock"></i>
+                            <span>Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-address-card-o"></i>
+                            <span>Nhập CV</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-file"></i>
+                            <span>Đăng tuyển</span>
+                        </a>
+                    </li>
+            </aside>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
         
 <section class="bg-light py-3">
     <div class="container banner-slide">
-        <div class="swiper-container swiper-main">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" data-swiper-autoplay="2000">
-                    <img class="w-100" src="./public/images/banner1.png" alt="">
+        <div class="row">
+            <div class="swiper-container swiper-main">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-swiper-autoplay="2000">
+                        <img class="w-100" src="./public/images/banner1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="w-100" src="./public/images/banner2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="w-100" src="./public/images/banner3.png" alt="">
+                    </div>
+                    <div class="swiper-pagination pagination-main"></div>
                 </div>
-                <div class="swiper-slide">
-                    <img class="w-100" src="./public/images/banner2.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class="w-100" src="./public/images/banner3.png" alt="">
-                </div>
-                <div class="swiper-pagination pagination-main"></div>
             </div>
         </div>
     </div>
 </section>
 <section class="bg-light py-3">
     <div class="container">
-        <div class="d-flex">
-            <div class="d-flex flex-wrap bg-white my-3 timepost flex-grow-1">
-                <div class="col-lg-6 col-md-12 ">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 pt-3">
-                            <div class="form-group">
-                                <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-2 text-center display-none">
-                            <span>Đến</span>
-                        </div>
-                        <div class="col-md-4 pt-3">
-                            <div class="form-group">
-                                <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-2 p-0 text-center">
-                            <a href="#">Nhập</a>
+        <div class="row bg-white my-3 timepost flex-grow-1 align-items-center">
+            <div class="col-md-8 order-md-1 order-2">
+                <div class="row align-items-center ">
+                    <div class="col-md-4 pt-3">
+                        <div class="form-group">
+                            <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="row align-items-center">
-                        <div class="col-md-12 p-0 text-lg-right text-center my-4 pr-0 pr-md-4">
-                            <a href="#">Đăng tuyển dụng mới</a>
+                    <div class="col-md-2 text-center display-none">
+                        <span>Đến</span>
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <div class="form-group">
+                            <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
                         </div>
+                    </div>
+                    <div class="col-md-2 p-0 text-center mb-3 mb-md-0">
+                        <a href="#">Nhập</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 order-md-2 order-1">
+                <div class="row align-items-center">
+                    <div class="col-md-12 text-lg-right text-center mt-3 mt-md-0">
+                        <a href="#">Đăng tuyển dụng mới</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 flex-grow-1">
-                <div class="row mb-3">
-                    <div class="col-lg-6 col-6">
-                        <div class="employer-box">
-                            <div class="row align-items-center py-3">
-                                <div class="col-lg-6">
-                                    <span class="icons-job"></span>
+            <div class="col-md-6">
+                <div class="mr-md-2 mr-0">
+                    <div class="row mb-3">
+                        <div class="col-md-6 col-6 p-md-0">
+                            <div class="employer-box mr-md-1 mr-0">
+                                <div class="row align-items-center py-3">
+                                    <div class="col-lg-6">
+                                        <span class="icons-job"></span>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span class="number-job">0</span>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h5>VIỆC LÀM ĐÃ ĐĂNG</h5>
+                                    </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <span class="number-job">0</span>
-                                </div>
-                                <div class="col-lg-12">
-                                    <h5>VIỆC LÀM ĐÃ ĐĂNG</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6 p-md-0">
+                            <div class="employer-box ml-md-1 ml-0">
+                                <div class="row align-items-center py-3">
+                                    <div class="col-lg-6">
+                                        <span class="icons2-job"></span>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span class="number-job">0</span>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h5>HỒ SƠ ỨNG TUYỂN</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-6">
-                        <div class="employer-box">
-                            <div class="row align-items-center py-3">
-                                <div class="col-lg-6">
-                                    <span class="icons2-job"></span>
+                    <div class="row bg-white border">
+                        <div class="col py-3">
+                            <div class="row text-center text-lg-left">
+                                <div class="col-lg-8">
+                                    <h5 class="m-0 font-weight-bold text-success table-title">HỒ SƠ ỨNG TUYỂN MỚI NHẤT</h5>
                                 </div>
-                                <div class="col-lg-6">
-                                    <span class="number-job">0</span>
-                                </div>
-                                <div class="col-lg-12">
-                                    <h5>HỒ SƠ ỨNG TUYỂN</h5>
+                                <div class="col-lg-4 text-center text-lg-right">
+                                    <a href="#" class="btn-dark text-white font-weight-bold btn-sm">Xem tất cả</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="d-flex flex-wrap employer-box text-left p-0">
-                            <div class="border-bottom col-lg-12">
-                                <div class="d-flex py-3">
-                                    <div class="col-lg-8">
-                                        <h5 class="m-0 font-weight-bold text-success">HỒ SƠ ỨNG TUYỂN MỚI NHẤT</h5>
-                                    </div>
-                                    <div class="col-lg-4 text-right">
-                                        <a href="#">Xem tất cả</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <table class="table col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table" style="min-width: 500px;">
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
@@ -160,19 +209,19 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <td scope="row">1</td>
                                         <td><a href="#">Nguyễn Kim Trọng</a></td>
                                         <td>Front-end</td>
                                         <td>1</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">2</th>
+                                        <td scope="row">2</td>
                                         <td><a href="#">Nguyễn Huy Hiệu</a></td>
                                         <td>Java</td>
                                         <td>1</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
+                                        <td scope="row">3</td>
                                         <td><a href="#">Nguyễn Thành Duy</a></td>
                                         <td>Kotlin</td>
                                         <td>4</td>
@@ -180,57 +229,63 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="col text-left p-md-0">
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="d-flex flex-column employer-box text-left p-0 h-100">
-                    <div class="border-bottom">
-                        <div class="d-flex py-3">
+            <div class="col-md-6">
+                <div class="row bg-white border">
+                    <div class="col py-3">
+                        <div class="row text-center text-lg-left">
                             <div class="col-lg-8">
-                                <h5 class="m-0 font-weight-bold text-success">DANH SÁCH TIN TUYỂN DỤNG MỚI NHẤT</h5>
+                                <h5 class="m-0 font-weight-bold text-success table-title">DANH SÁCH TIN TUYỂN DỤNG MỚI NHẤT</h5>
                             </div>
-                            <div class="col-lg-4 text-right">
-                                <a href="#">Xem tất cả</a>
+                            <div class="col-lg-4 text-center text-lg-right">
+                                <a href="#" class="btn-dark text-white font-weight-bold btn-sm">Xem tất cả</a>
                             </div>
                         </div>
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Tên công việc</th>
-                                <th scope="col">Ngày đăng</th>
-                                <th scope="col">Hết hạn</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><a href="#">Tuyển dụng nhân viên kinh doanh</a></td>
-                                <td>10/3/2019</td>
-                                <td>10/4/2019</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><a href="#">Tuyển dụng nhân viên IT</a></td>
-                                <td>10/3/2019</td>
-                                <td>10/4/2019</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td><a href="#">Tuyển dụng nhân viên văn phòng</a></td>
-                                <td>10/3/2019</td>
-                                <td>10/4/2019</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
-                                <td>10/3/2019</td>
-                                <td>10/4/2019</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table" style="min-width: 500px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Tên công việc</th>
+                                    <th scope="col">Ngày đăng</th>
+                                    <th scope="col">Hết hạn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td><a href="#">Tuyển dụng nhân viên kinh doanh</a></td>
+                                    <td>10/3/2019</td>
+                                    <td>10/4/2019</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">2</td>
+                                    <td><a href="#">Tuyển dụng nhân viên IT</a></td>
+                                    <td>10/3/2019</td>
+                                    <td>10/4/2019</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">3</td>
+                                    <td><a href="#">Tuyển dụng nhân viên văn phòng</a></td>
+                                    <td>10/3/2019</td>
+                                    <td>10/4/2019</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">4</td>
+                                    <td><a href="#">Tuyển dụng nhân viên marketing</a></td>
+                                    <td>10/3/2019</td>
+                                    <td>10/4/2019</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -240,7 +295,7 @@
         <footer id="footer" class="">
     <div class="container py-lg-5 py-md-4 py-3">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
                     <address class="footer-body">
@@ -261,7 +316,7 @@
                     </address>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">Vị trí bản đồ</h2>
                     <iframe
@@ -269,7 +324,7 @@
                         frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="footer-block">
                     <h2 class="footer-title">
                         Fanpage
@@ -290,9 +345,11 @@
     </div>
 
     <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
     <script src="./public/js/popper.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
     <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/bootstrap-tagsinput.min.js"></script>
     <script src="./public/js/app.js"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>

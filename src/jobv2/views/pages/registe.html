@@ -1,0 +1,79 @@
+{% extends 'layouts/default.html' %}
+
+{% block title %}Registe{% endblock %}
+
+{% block content %}
+<section class="registe-page py-lg-5 py-md-4 py-3">
+    <div class="container">
+        <form class="row" action="" method="post">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1 registe-page-boxright boxshadow text-center mb-3 py-3">
+                <div class="my-2">
+                    <h3 class="registe-page-title text-light">Đăng ký ứng viên</h3>
+                </div>
+
+                <div class="row justify-content-center py-3">
+                    <div class="col-lg-12 my-2">
+                        <div class="text-left">
+                            <span class="form-title">Họ tên:</span>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                            <input class="form-control form-control-lg" type="text" autocomplete="off" placeholder="Vui lòng nhập họ tên">
+                        </div>
+                        <div class="text-left w-100 mx-2">
+                            <small class="text-danger">Nhập Lại Họ Tên</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                        <div class="text-left">
+                            <span class="form-title">Địa chỉ email:</span>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                            <input class="form-control form-control-lg" type="email" autocomplete="off" placeholder="Nhập địa chỉ email">
+                        </div>
+                        <div class="text-left w-100 mx-2">
+                            <small class="text-danger">Nhập Lại Email</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                        <div class="text-left">
+                            <span class="form-title">Số điện thoại:</span>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                            <input class="form-control form-control-lg" type="number" autocomplete="off" placeholder="Nhập số điện thoại...">
+                        </div>
+                        <div class="text-left w-100 mx-2">
+                            <small class="text-danger">Nhập Lại số điện thoại</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                        <div class="text-left">
+                            <span>Nhập Chứng minh nhân dân:</span>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                            <input class="form-control form-control-lg" type="number" autocomplete="off" placeholder="Vd: 273555999">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                        <div class="text-left">
+                            <span>Chỗ ở hiện tại:</span>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                            <input class="form-control form-control-lg" type="text" autocomplete="off" placeholder="Nhập chỗ ở hiện tại...">
+                        </div>
+                    </div>
+                    <div class="text-left col-lg-12">
+                        <span class="form-title">ghi chú:</span>
+                        <textarea class="form-control" row="3"></textarea>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="registe-page-link-login">Đăng ký</button>
+                </div>
+                <div class="row text-center justify-content-center py-2">
+                    <p>Bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

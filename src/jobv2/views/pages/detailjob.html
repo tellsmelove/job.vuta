@@ -1,0 +1,167 @@
+{% extends 'layouts/default.html' %}
+
+{% block title %}Detailjob{% endblock %}
+
+{% block content %}
+
+<div class="container p-0">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detail</li>
+        </ol>
+    </nav>
+</div>
+<section>
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center mb-3 detail-company">
+            <div class="col-md-2 text-center img-company py-2">
+                <img src="{{img('logo-hoangphat.png')}}" alt="">
+            </div>
+            <div class="col-md-10 content-company py-2">
+                <ul class="nolist">
+                    <li class="post-title-sm">
+                        <a href="#" class="post-itemlist-title detail-company__title">Tuyển dụng nhân viên
+                            Hoàng phát</a>
+                    </li>
+                    <li class="company-sm">
+                        <a href="#" class="post-itemlist-company">Hoàng Phát Technology</a>
+                    </li>
+                </ul>
+                <div class="col p-0">
+                    <span><a class="post-tags" href="#">Nam/Nữ</a></span>
+                    <span><a class="post-tags" href="#">02</a></span>
+                    <span><a class="post-tags" href="#">BR-VT</a></span>
+                </div>
+                <div class="col p-0">
+                    <span><a class="post-tags" href="#">7.000.000đ - 10.000.000đ</a></span>
+                    <span><a class="post-tags" href="#">ĐH</a></span>
+                    <span><a class="post-tags" href="#">18-4-2019</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12">
+                <div class="d-flex flex-wrap list-detail">
+                    <div class="col-md-7 flex-column col-12 pt-3">
+                        <h3>Quyền lợi được hưởng</h3>
+                        <p>Thời gian làm việc thân thiện, linh hoạt và môi trường khởi động vui vẻ.
+                            Mức lương hấp dẫn dựa trên kỹ năng và kinh nghiệm.
+                            Được làm việc với người nước ngoài
+                            Cà phê và đồ ăn nhẹ miễn phí.
+                            Bảo hiểm chăm sóc sức khoẻ.
+                            13 tháng lương.
+                            Nghỉ phép phải trả 15 ngày một năm.</p>
+                        <h4>Mô tả công việc</h4>
+                        <p>Chúng tôi đang tìm kiếm một kỹ sư lập trình backend JavaScript, người thành thạo với
+                            React.js. Trọng tâm chính của bạn
+                            sẽ là phát triển các thành phần giao diện người dùng và triển khai chúng theo thư viện
+                            React.js phổ biến (chẳng hạn như
+                            Flux hoặc Redux). Bạn phải đảm bảo rằng các components là một ứng dụng tổng thể, dễ phát
+                            triển, dễ bảo trì. Bạn sẽ phối
+                            hợp với phần còn lại của nhóm làm việc trên các tầng khác nhau của cơ sở hạ tầng. Do đó,
+                            cam kết giải quyết vấn đề hợp
+                            tác, thiết kế tinh vi và chất lượng sản phẩm là quan trọng.</p>
+                        <h4>Yêu cầu công việc</h4>
+                        <p>Có từ kinh nghiệm với vị trí lập trình backend javascript<br>
+                            Có kiến thức về lập trình HTML5, JavaScript, jQuery, Ajax and PHP, MySQL<br>
+                            Phát triển các tính năng mới hướng đến người dùng bằng React.js<br>
+                            Xây dựng các components và thư viện front-end<br>
+                            Lập trình code dựa trên thiết kế và khung thiết kế có sẳn<br>
+                            Tối ưu hóa các components cho hiệu suất tối đa trên một loạt các thiết bị và trình duyệt
+                            web</p>
+                        <div class="py-3">
+                            <h4>Chọn vị trí ứng tuyển</h4>
+                            <div class="py-3 px-3 form-box">
+                                <ul class="nolist">
+                                    <li>
+                                        <input id="positionjob1" type="radio" name="gender" value="male"><label for="positionjob1"><span>Back-End</span></label>
+                                    </li>
+                                    <li>
+                                        <input id="positionjob2" type="radio" name="gender" value="male"><label for="positionjob2"><span>Full Stack</span></label>
+                                    </li>
+                                    <li>
+                                        <input id="positionjob3" type="radio" name="gender" value="male"><label for="positionjob3"><span>Design</span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <a href="#" class="detail-company__link p-3">Ứng tuyển</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-12 pt-3 bannerdetail pb-3">
+                        <div class="row">
+                            <div class="col-md-12 col-6 mb-3">
+                                <img src="https://blog.dmagroup.vn/wp-content/uploads/2018/08/thiet-ke-banner-quang-cao-truc-tuyen-3.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-md-12 col-6">
+                                <img src="https://blog.dmagroup.vn/wp-content/uploads/2018/08/thiet-ke-banner-quang-cao-truc-tuyen-3.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="row flex-column bannerqc-detail sticky">
+                    <div class="col-12 mb-3 w-100">
+                        <img src="https://i.pinimg.com/originals/71/dd/2e/71dd2e2c9f753dd5c101e1c645ea8eee.jpg" alt="">
+                    </div>
+                    <div class="col-12 mb-3 w-100">
+                        <img src="https://i.pinimg.com/originals/71/dd/2e/71dd2e2c9f753dd5c101e1c645ea8eee.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-lg-9">
+                <div class="d-flex">
+                    <h4>Thông tin công ty</h4>
+                </div>
+                <div class="d-flex flex-wrap align-items-center mb-3 detail-company">
+                    <div class="col-md-3 text-center img-company">
+                        <img src="{{img('logo-hoangphat.png')}}" alt="">
+                    </div>
+                    <div class="col-md-9 content-company py-2">
+                        <ul class="nolist">
+                            <li class="post-title-sm">
+                                <a href="#" class="post-itemlist-title detail-company__title">
+                                    Công ty TNHH Hoàng Phát
+                                </a>
+                            </li>
+                            <li>Chuyên giải quyết vấn đề phần mềm</li>
+                            <li>Đạt danh hiệu chuẩn iso 2018</li>
+                            <li>Website: <a href="#" class="text-dark"><u>hoangphat.org</u></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="d-flex">
+                    <h4>Các công việc khác của Công ty</h4>
+                </div>
+                <div class="d-flex flex-wrap align-items-center mb-3 detail-company py-3">
+                    <div class="col-lg-12">
+                        <ul class="nolist list-job-another">
+                            <li><a href="#">Tuyển dụng nhân viên lao công</a></li>
+                            <li><a href="#">Tuyển dụng senior Java</a></li>
+                            <li><a href="#">Tuyển dụng Junior Java</a></li>
+                            <li><a href="#">Tuyển dụng Thực tập sinh</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

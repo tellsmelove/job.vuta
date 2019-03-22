@@ -1,22 +1,29 @@
 .portfolio {
-    ul {
-        li {
-            padding-bottom: 8px;
-        }
-        span {
-            font-size: 14pt;
-            &:first-child{
-                font-weight: bold;
-                &::after {
-                    content: ': ';
-                }
-            }
-        }
+    @include max-sm {
+        font-size: 12pt;
     }
 }
-// .avatar {
-//     position: relative;
-// }
+.info-title {
+    font-weight: bold;
+    &::after {
+        content: ':';
+    }
+}
+.info-content {
+    color: green;
+    &-name {
+        color: rgb(192, 20, 20);
+        font-weight: bold;
+    }
+}
+.info-line {
+    @include max-sm {
+        border-bottom: 1px solid #eee;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+}
 .skill {
     min-height: 300px;
     li{
@@ -62,14 +69,12 @@
         &:hover {
            background-color: #285028;
         }
-        
     }
     &_secondary{
         background-color: #4f524f;
         &:hover {
            background-color: #282928;
         }
-        
     }
     &_info{
         background-color: #d40808;

@@ -3,13 +3,30 @@
 @import './header';
 @import './footer';
 @import './detailperson';
+@import './detailjob';
 @import './updatecv';
 @import './employer';
 @import './employerpost';
+@import './jobcompany';
+@import './jobmanage';
+@import './login';
+@import './registe';
+@import './registemaster';
+@import './listjobcompany';
+@import './person';
+@import './personlogin';
 body{
     color: #000;
     font-family: 'Montserrat', sans-serif;
-
+    @include max-xl {
+        font-size: 15pt;
+    }
+    @include max-md {
+        font-size: 13pt;
+    }
+    @include max-sm {
+        font-size: 12pt;
+    }
 }
 
 .item-function {
@@ -19,7 +36,12 @@ body{
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     transition: all .15s ease-in-out;
 }
-
+.form-control{
+    &:focus{
+        box-shadow: none;
+        outline: none;
+    }
+}
 .post {
     &-item {
         background-color: rgba(#fff, .8);
@@ -32,9 +54,7 @@ body{
                 color: #1c9c05;
             }
         }
-        
     }
-
     &-itemlist{
         border-bottom: 1px solid #dee2e6;
         margin: 0!important;
@@ -59,24 +79,23 @@ body{
             }
         }
         &:hover {
-            background-color: #eee;
-            
+            background-color: #eee;  
         }
     }
     &-tags{
-        display: block;
-        background-color:#868686;
+        display: inline-block;
+        background-color: #7a7b7b;
         color: #fff;
         border-radius: 4px;
-        margin: 4px;
+        margin: 4px 8px 4px 8px;
         font-size: 11pt;
+        padding: 4px 4px;
         
         &:hover {
             background-color: rgba(#1c9c05, .7);
             color: #fff;
         }
     }
-
 }
 .swiper-slide {
     height: auto;
@@ -116,7 +135,6 @@ body{
             display: none;
         }
     }
-    
     input {
         padding: 0.6rem 0.5rem 0.6rem 2.5rem;
         @include max-sm {
@@ -141,12 +159,7 @@ body{
     background-color: #fff!important;
     padding: 0.75rem 0.5rem 0.75rem 2.5rem;
     @include max-sm {
-            padding: 0.5rem 0 0.5rem 0.5rem;
-        }
-}
-.banner-slide {
-    @include max-sm {
-        // display: none;
+        padding: 0.5rem 0 0.5rem 0.5rem;
     }
 }
 .swiper-main{
@@ -186,7 +199,7 @@ body{
         transform: translate(-50%, -50%);
         background-color: rgba(71, 191, 49, .6);
         color: #fff;
-        padding: 40px 40px;
+        // padding: 40px 40px;
         font-size: 18pt;
         font-weight: bold;
         span {

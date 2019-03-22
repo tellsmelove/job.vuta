@@ -91,7 +91,7 @@
   !*** ./src/jobv2/js/app.js ***!
   \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 var prevScrollpos = window.pageYOffset;
 var header = document.querySelector('#header');
@@ -99,6 +99,10 @@ var sub_menu = document.getElementById('sub-menu');
 var toggle_menu = document.getElementById('toggle');
 var overlay = document.getElementById('overlay');
 $(document).ready(function () {
+  __webpack_require__(/*! ./make_tag */ "./src/jobv2/js/make_tag.js");
+
+  __webpack_require__(/*! ./filters */ "./src/jobv2/js/filters.js");
+
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     var navbar = document.getElementById('navbar');
@@ -198,19 +202,13 @@ $(document).ready(function () {
         slidesPerView: 3,
         direction: 'vertical',
         simulateTouch: false,
+        autoplay: {
+          delay: 5000
+        },
         breakpoints: {
           320: {
             slidesPerView: 1,
             spaceBetween: 10,
-            direction: 'horizontal',
-            simulateTouch: true,
-            autoplay: {
-              delay: 5000
-            }
-          },
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 20,
             direction: 'horizontal',
             simulateTouch: true,
             autoplay: {
@@ -226,7 +224,13 @@ $(document).ready(function () {
               delay: 5000
             }
           },
-          767: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            direction: 'vertical',
+            simulateTouch: false
+          },
+          1024: {
             slidesPerView: 3,
             spaceBetween: 20,
             direction: 'vertical',
@@ -259,6 +263,63 @@ function outSideClick(target) {
     overlay.removeAttribute('style');
   }, 200);
 }
+
+/***/ }),
+
+/***/ "./src/jobv2/js/filters.js":
+/*!*********************************!*\
+  !*** ./src/jobv2/js/filters.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$("#myInput").on("keyup", function () {
+  var value = $(this).val().toLowerCase();
+  $("#xyz label").filter(function () {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+  });
+});
+
+/***/ }),
+
+/***/ "./src/jobv2/js/make_tag.js":
+/*!**********************************!*\
+  !*** ./src/jobv2/js/make_tag.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// import Vue from 'vue';
+// var app = new Vue({
+//     data: {
+//         tagList: [],
+//         InputTags: null,
+//     },
+//     methods:{
+//         makeTags(){
+//             if (this.InputTags){
+//                 this.tagList.push(this.InputTags.replace(',', ''))
+//                 this.InputTags = null;
+//             }
+//         },
+//         removeTag(key){
+//             this.$delete(this.tagList, key)
+//         },
+//         defaultValue(data){
+//             if (data){
+//                 let _arr = data.split(',')
+//                 for(let i of _arr){
+//                     console.log(i)
+//                     this.tagList.push(i)
+//                 }
+//             }
+//             return this.tagList
+//         }
+//     },
+//     created(){
+//     }
+// }).$mount('#app')
+$("#tags-input").val();
 
 /***/ }),
 
