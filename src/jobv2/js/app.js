@@ -14,7 +14,6 @@ $(document).ready(() => {
         if (prevScrollpos >= currentScrollPos && window.pageYOffset !== 0) {
             header.classList.add('affix')
             header.classList.remove('hidden')
-            // navbar.classList.add('menu_left')
         } else {
             header.classList.remove('affix')
             header.classList.remove('hidden')
@@ -22,27 +21,32 @@ $(document).ready(() => {
         if (window.pageYOffset == 0) {
             header.classList.remove('affix')
             header.classList.add('hidden')
-            // navbar.classList.remove('menu_left')
         }
         prevScrollpos = currentScrollPos;
     }
-    toggle_menu.addEventListener('click', (e) => {
-        e.preventDefault();
-        let navbar = document.getElementById('navbar');
-        let height = header.clientHeight;
-        let classList = navbar.classList;
-        if (classList.contains('active')){
-            outSideClick(navbar)
-        }else{
-            navbar.style.height = `calc(100vh - ${height}px - ${sub_menu.clientHeight}px)`;
-            navbar.style.top = `${height}px`;
-            navbar.classList.add('active')
-            overlay.classList.add('active');
-            overlay.style.top = `${height}px`;
-            overlay.style.height = `calc(100vh - ${height}px)`;
-        }
-               
-    })
+    if(toggle_menu){
+        toggle_menu.addEventListener('click', (e) => {
+            e.preventDefault();
+            let navbar = document.getElementById('navbar');
+            let height = header.clientHeight;
+            let classList = navbar.classList;
+            if (classList.contains('active')) {
+                outSideClick(navbar)
+            } else {
+                if (window.innerWidth > 767) {
+                    navbar.style.height = `calc(100vh - ${height}px - ${sub_menu.clientHeight}px)`;
+                } else {
+                    navbar.style.height = `calc(100vh - ${height}px)`;
+                }
+                navbar.style.top = `${height}px`;
+                navbar.classList.add('active')
+                overlay.classList.add('active');
+                overlay.style.top = `${height}px`;
+                overlay.style.height = `calc(100vh - ${height}px)`;
+            }
+
+        })
+    }
     overlay.addEventListener('click', () => {
         let navbar = document.getElementById('navbar');
         outSideClick(navbar)

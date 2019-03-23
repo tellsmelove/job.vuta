@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/css/font-awesome.css">
     <link rel="stylesheet" href="./public/css/swiper.min.css">
     <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="./public/css/app.css">
     <title>Create-CV</title>
 </head>
@@ -18,15 +19,15 @@
         <header id="header">
     <div class="container">
         <div class="row">
-            <div id="logo" class="col-xl-3 col-md-2 col-10">
+            <div id="logo" class="col-md-3 col-10">
                 <a href="#" class="text-md-center">
                     <img src="./public/images/logo.png" alt="">
                 </a>
             </div>
-            <div class="col-lg-6 col-md-7 px-0 header-middle order-md-0 order-1">
+            <div class="col-md-9 pl-0 order-md-0 order-1">
                 <div class="d-flex flex-column h-100">
-                    <h1 class="mb-0 text-normal text-uppercase text-center">
-                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    <h1 class="mb-0 text-normal header-middle text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
                     </h1>
                     <nav id="navbar">
                         <ul class="nolist d-md-flex h-100">
@@ -43,9 +44,10 @@
                                 </a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span>Việc làm</span>
-                                    <span>Vũng Tàu</span>
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span>Quản lí</span>
+                                    <span>Tài Khoản</span>
                                 </a>
                                 <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <ul class="nolist">
@@ -62,33 +64,6 @@
                     </nav>
                 </div>
             </div>
-            <aside id="sub-menu" class="col-xl-3 col-lg-4 col-md-3 pl-md-0">
-                <ul class="d-flex h-100 nolist">
-                    <li class="col-md-6 px-0">
-                        <a href="#">
-                            <i class="fa fa-lg fa-user"></i>
-                            <span>Đăng ký</span>
-                        </a>
-                    </li>
-                    <li class="col-md-6 px-0">
-                        <a href="">
-                            <i class="fa fa-lg fa-lock"></i>
-                            <span>Đăng nhập</span>
-                        </a>
-                    </li>
-                    <li class="col-md-6 px-0">
-                        <a href="">
-                            <i class="fa fa-lg fa-address-card-o"></i>
-                            <span>Nhập CV</span>
-                        </a>
-                    </li>
-                    <li class="col-md-6 px-0">
-                        <a href="">
-                            <i class="fa fa-lg fa-file"></i>
-                            <span>Đăng tuyển</span>
-                        </a>
-                    </li>
-            </aside>
             <div id="toggle" class="col-2 d-md-none d-block text-center">
                 <a href="#">
                     <i class="fa fa-lg fa-bars"></i>
@@ -99,11 +74,11 @@
     </div>
 </header>
         
-<section class="CreateCV py-lg-5 py-3">
+<section class="py-lg-5 py-3">
     <div class="container">
         <form action="" method="post">
-            <div class="porfolio-test">
-                <div class="row py-lg-4 porfolio-test-1">
+            <div class="porfolio-test px-3">
+                <div class="row py-lg-4">
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-12 col-6 justify-content-center text-center bg-success mb-lg-3">
@@ -126,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 flex-grow-1">
+                    <div class="col-md-9 pr-md-0 mb-3">
                         <div class="bg-white profile">
                             <h5 class="text-center mb-0 mt-3 mt-md-0">
                                 <span href="#" class="title-updatecv">Thông Tin Cá Nhân</span>
@@ -134,7 +109,7 @@
                             <div class="px-3 pt-3">
                                 <div class="row">
                                     <div class="col-md-6 py-2">
-                                        <div class="form-group-sm">
+                                        <div class="form-group">
                                             <input class="form-control form-control-sm rounded-0"
                                                 placeholder="Nhập Họ Tên">
                                         </div>
@@ -159,7 +134,7 @@
                                     </div>
                                     <div class="col-md-6 py-2">
                                         <div class="form-group-sm">
-                                            <input class="form-control form-control-sm rounded-0" type="date"
+                                            <input class="form-control form-control-sm   rounded-0" type="date"
                                                 name="bday" max="3000-12-31" min="1000-01-01"  class="form-control" value="1950-03-31">
                                         </div>
                                     </div>
@@ -266,22 +241,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row bg-light py-lg-4 porfolio-test-2">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-12">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row bg-light py-lg-4 py-3">
+                <div class="row py-lg-4 py-3 bg-light">
                     <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Kỹ Năng</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập kỹ năng..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -289,7 +255,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Phần Mềm Thông Dụng</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập tên phần mềm..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -297,7 +263,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Học Vấn</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập học vấn..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -305,7 +271,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Chứng Chỉ Khác</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập chứng chỉ khác..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -313,7 +279,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Kinh Nghiệm Làm Việc</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập kinh nghiệm..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -321,15 +287,22 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Các Giải Thưởng Đã Đạt</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập các giải thưởng..."></textarea>
                         </div>
                     </div>
-                    <div class="col-md-12 mb-lg-3">
-                        <div class="porfolio-cv">
-                            <h5 class="text-center mb-0">
-                                <span href="#" class="title-updatecv">Các Giải Thưởng Đã Đạt</span>
-                            </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                    <div class="col-md-12 py-3">
+                        <p class="content-plus">
+                            <a class="btn btn-secondary font-weight-bold w-100" data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span>Thông tin thêm</span>
+                                <i class="fa fa-sort-desc text-right" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <textarea name="text" id="opentext" cols="30" rows="5"
+                                    placeholder="url video, website cá nhân...."></textarea>
+                            </div>
                         </div>
                     </div>
                     <div class="text-center w-100 py-3">
@@ -345,7 +318,7 @@
         <footer id="footer" class="">
     <div class="container py-lg-5 py-md-4 py-3">
         <div class="row">
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-lg-4 mb-3 mb-lg-0">
                 <div class="footer-block">
                     <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
                     <address class="footer-body">
@@ -366,7 +339,7 @@
                     </address>
                 </div>
             </div>
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
                 <div class="footer-block">
                     <h2 class="footer-title">Vị trí bản đồ</h2>
                     <iframe
@@ -374,7 +347,7 @@
                         frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
                 </div>
             </div>
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
                 <div class="footer-block">
                     <h2 class="footer-title">
                         Fanpage
@@ -399,10 +372,10 @@
     <script src="./public/js/popper.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
     <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/bootstrap-tagsinput.min.js"></script>
     <script src="./public/js/app.js"></script>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>
 </body>
 
 </html>

@@ -90,7 +90,8 @@ body{
         margin: 4px 8px 4px 8px;
         font-size: 11pt;
         padding: 4px 4px;
-        
+        min-width: 45px;
+        text-align: center;
         &:hover {
             background-color: rgba(#1c9c05, .7);
             color: #fff;

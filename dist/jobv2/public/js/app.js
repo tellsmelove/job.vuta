@@ -110,7 +110,7 @@ $(document).ready(function () {
 
     if (prevScrollpos >= currentScrollPos && window.pageYOffset !== 0) {
       header.classList.add('affix');
-      header.classList.remove('hidden'); // navbar.classList.add('menu_left')
+      header.classList.remove('hidden');
     } else {
       header.classList.remove('affix');
       header.classList.remove('hidden');
@@ -118,29 +118,37 @@ $(document).ready(function () {
 
     if (window.pageYOffset == 0) {
       header.classList.remove('affix');
-      header.classList.add('hidden'); // navbar.classList.remove('menu_left')
+      header.classList.add('hidden');
     }
 
     prevScrollpos = currentScrollPos;
   };
 
-  toggle_menu.addEventListener('click', function (e) {
-    e.preventDefault();
-    var navbar = document.getElementById('navbar');
-    var height = header.clientHeight;
-    var classList = navbar.classList;
+  if (toggle_menu) {
+    toggle_menu.addEventListener('click', function (e) {
+      e.preventDefault();
+      var navbar = document.getElementById('navbar');
+      var height = header.clientHeight;
+      var classList = navbar.classList;
 
-    if (classList.contains('active')) {
-      outSideClick(navbar);
-    } else {
-      navbar.style.height = "calc(100vh - ".concat(height, "px - ").concat(sub_menu.clientHeight, "px)");
-      navbar.style.top = "".concat(height, "px");
-      navbar.classList.add('active');
-      overlay.classList.add('active');
-      overlay.style.top = "".concat(height, "px");
-      overlay.style.height = "calc(100vh - ".concat(height, "px)");
-    }
-  });
+      if (classList.contains('active')) {
+        outSideClick(navbar);
+      } else {
+        if (window.innerWidth > 767) {
+          navbar.style.height = "calc(100vh - ".concat(height, "px - ").concat(sub_menu.clientHeight, "px)");
+        } else {
+          navbar.style.height = "calc(100vh - ".concat(height, "px)");
+        }
+
+        navbar.style.top = "".concat(height, "px");
+        navbar.classList.add('active');
+        overlay.classList.add('active');
+        overlay.style.top = "".concat(height, "px");
+        overlay.style.height = "calc(100vh - ".concat(height, "px)");
+      }
+    });
+  }
+
   overlay.addEventListener('click', function () {
     var navbar = document.getElementById('navbar');
     outSideClick(navbar);
@@ -319,7 +327,11 @@ $("#myInput").on("keyup", function () {
 //     created(){
 //     }
 // }).$mount('#app')
-$("#tags-input").val();
+var tags = $("#tags-input");
+
+if (tags) {
+  $(tags).val();
+}
 
 /***/ }),
 

@@ -1,13 +1,13 @@
-{% extends 'layouts/default.html' %}
+{% extends 'layouts/personal.html' %}
 
 {% block title %}Create-CV{% endblock %}
 
 {% block content %}
-<section class="CreateCV py-lg-5 py-3">
+<section class="py-lg-5 py-3">
     <div class="container">
         <form action="" method="post">
-            <div class="porfolio-test">
-                <div class="row py-lg-4 porfolio-test-1">
+            <div class="porfolio-test px-3">
+                <div class="row py-lg-4">
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-12 col-6 justify-content-center text-center bg-success mb-lg-3">
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 flex-grow-1">
+                    <div class="col-md-9 pr-md-0 mb-3">
                         <div class="bg-white profile">
                             <h5 class="text-center mb-0 mt-3 mt-md-0">
                                 <span href="#" class="title-updatecv">Thông Tin Cá Nhân</span>
@@ -38,7 +38,7 @@
                             <div class="px-3 pt-3">
                                 <div class="row">
                                     <div class="col-md-6 py-2">
-                                        <div class="form-group-sm">
+                                        <div class="form-group">
                                             <input class="form-control form-control-sm rounded-0"
                                                 placeholder="Nhập Họ Tên">
                                         </div>
@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="col-md-6 py-2">
                                         <div class="form-group-sm">
-                                            <input class="form-control form-control-sm rounded-0" type="date"
+                                            <input class="form-control form-control-sm   rounded-0" type="date"
                                                 name="bday" max="3000-12-31" min="1000-01-01"  class="form-control" value="1950-03-31">
                                         </div>
                                     </div>
@@ -134,22 +134,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row bg-light py-lg-4 porfolio-test-2">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-12">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row bg-light py-lg-4 py-3">
+                <div class="row py-lg-4 py-3 bg-light">
                     <div class="col-md-6 py-2 mb-lg-3">
                         <div class="porfolio-cv">
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Kỹ Năng</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập kỹ năng..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -157,7 +148,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Phần Mềm Thông Dụng</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập tên phần mềm..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -165,7 +156,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Học Vấn</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập học vấn..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -173,7 +164,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Chứng Chỉ Khác</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập chứng chỉ khác..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -181,7 +172,7 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Kinh Nghiệm Làm Việc</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập kinh nghiệm..."></textarea>
                         </div>
                     </div>
                     <div class="col-md-6 py-2 mb-lg-3">
@@ -189,15 +180,22 @@
                             <h5 class="text-center mb-0">
                                 <span href="#" class="title-updatecv">Các Giải Thưởng Đã Đạt</span>
                             </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="text" id="" rows="6" placeholder="Nhập các giải thưởng..."></textarea>
                         </div>
                     </div>
-                    <div class="col-md-12 mb-lg-3">
-                        <div class="porfolio-cv">
-                            <h5 class="text-center mb-0">
-                                <span href="#" class="title-updatecv">Các Giải Thưởng Đã Đạt</span>
-                            </h5>
-                            <textarea class="form-control" name="text" id="" rows="6"></textarea>
+                    <div class="col-md-12 py-3">
+                        <p class="content-plus">
+                            <a class="btn btn-secondary font-weight-bold w-100" data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span>Thông tin thêm</span>
+                                <i class="fa fa-sort-desc text-right" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <textarea name="text" id="opentext" cols="30" rows="5"
+                                    placeholder="url video, website cá nhân...."></textarea>
+                            </div>
                         </div>
                     </div>
                     <div class="text-center w-100 py-3">

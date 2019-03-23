@@ -29,5 +29,7 @@
 //     created(){
 //     }
 // }).$mount('#app')
-
-$("#tags-input").val()
+var tags = $("#tags-input")
+if(tags){
+    $(tags).val()
+}

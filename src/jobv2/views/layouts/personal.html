@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="{{ css('font-awesome.css') }}">
     <link rel="stylesheet" href="{{ css('swiper.min.css') }}">
     <link rel="stylesheet" href="{{ css('jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ css('bootstrap-tagsinput.min.css') }}">
+    <link rel="stylesheet" href="{{ css('bootstrap-tagsinput.css') }}">
     <link rel="stylesheet" href="{{ css('app.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
     <div id="app">
-        {% include 'components/header.html' %}
+        {% include 'components/headerlogin.html' %}
         {% block content %}{% endblock %}
         {% include 'components/footer.html' %}
         <div id="overlay"></div>
