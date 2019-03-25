@@ -425,8 +425,9 @@ input[type=number] {
 .skill {
   min-height: 300px;
 }
-.skill li {
-  padding: 10px 8px;
+.skill p {
+  padding: 5px 8px;
+  margin-bottom: 0;
 }
 .skill span::before {
   content: "+ ";
