@@ -285,7 +285,13 @@ input[type=number] {
   margin: 0 -15px;
 }
 #sub-menu a {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   text-align: center;
   padding: 10px;
@@ -1547,6 +1553,24 @@ body {
   width: 100%;
   text-align: center;
 }
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  #header.affix .header-middle {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  #header.affix #sub-menu {
+    max-width: 30%;
+    flex: 0 0 30%;
+  }
+  #header.affix #sub-menu li .fa {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 767px) {
+  #header #logo a img {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
   #header {
     background-color: #43A047;
@@ -1598,9 +1622,6 @@ body {
   #navbar > ul > li:not(:last-child) a {
     border-right: 1px solid rgba(76, 175, 80, 0.4);
   }
-  #sub-menu a {
-    font-size: 10pt;
-  }
   #sub-menu a .fa {
     display: none;
   }
@@ -1640,9 +1661,8 @@ body {
     -webkit-transform: unset;
             transform: unset;
   }
-  #header.affix .header-middle {
-    flex: 0 0 40%;
-    max-width: 40%;
+  #header.affix .view {
+    display: none;
   }
   #header.affix .header-middle a {
     height: 100%;
@@ -1661,20 +1681,6 @@ body {
   }
   #header.affix #sub-menu {
     flex-wrap: nowrap;
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
-  #header.affix #sub-menu li {
-    flex: 1 1 auto;
-    width: auto !important;
-  }
-  #header.affix #sub-menu li a {
-    padding: 8px 5px;
-    font-size: 10pt;
-  }
-  #header.affix #sub-menu li a .fa {
-    display: block;
-    line-height: 0.75em;
   }
   #navbar .dropdown-menu {
     padding: 0;
@@ -1687,11 +1693,6 @@ body {
   }
   #navbar .dropdown-menu li:not(:last-child) a {
     border-bottom: 1px solid #eee;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 767px) {
-  #header #logo a img {
-    width: 100%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1709,6 +1710,28 @@ body {
     display: inline-block;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  #header.affix .header-middle {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  #header.affix #sub-menu {
+    max-width: 40%;
+    flex: 0 0 40%;
+  }
+  #header.affix #sub-menu li {
+    flex: 1 1 auto;
+    width: auto !important;
+  }
+  #header.affix #sub-menu li a {
+    padding: 8px 5px;
+    font-size: 10pt;
+  }
+  #header.affix #sub-menu li a .fa {
+    display: block;
+    line-height: 0.75em;
+  }
+}
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   #header #logo a img {
     max-width: 160px;
@@ -1722,86 +1745,6 @@ body {
 @media (min-width: 1900px) {
   .container {
     max-width: 1450px;
-  }
-}
-@media screen and (max-width: 767px) {
-  #header {
-    background-color: #fff;
-    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2);
-  }
-  #header #logo {
-    padding: 8px 15px;
-    flex-grow: 1;
-  }
-  #header #logo img {
-    height: 50px;
-    width: auto;
-  }
-  #header h1 {
-    display: none;
-  }
-  #navbar {
-    position: fixed;
-    overflow-y: auto;
-    left: -100%;
-    transition: 0.4s ease all;
-    z-index: 6;
-    min-width: 250px;
-  }
-  #navbar.active {
-    left: 0;
-  }
-  #navbar a {
-    justify-content: start;
-  }
-  #sub-menu {
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    transition: 0.4s ease all;
-    text-align: center;
-  }
-  #sub-menu li {
-    flex: 1 1 auto;
-    width: auto;
-  }
-  #sub-menu li:not(:last-child) a {
-    border-right: 1px solid #eee;
-  }
-  #sub-menu span {
-    font-size: 8pt;
-    display: block;
-  }
-  #sub-menu li a {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#ddd));
-    background-image: -o-linear-gradient(bottom, #fff, #ddd);
-    background-image: linear-gradient(to top, #fff, #ddd);
-    color: #43A047;
-  }
-  #header.affix #logo img {
-    max-height: 45px;
-  }
-  #header.affix #sub-menu {
-    bottom: 0%;
-  }
-  #navbar .dropdown-menu {
-    position: static !important;
-    width: 100%;
-    padding: 0;
-    background-color: #eeee;
-    -webkit-transform: unset !important;
-            transform: unset !important;
-  }
-  #navbar .dropdown-menu li {
-    padding: 0;
-  }
-  .bannerqc-items {
-    height: 150px;
-  }
-  body {
-    font-size: 13pt;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1917,6 +1860,86 @@ body {
   }
   .banner-bottom {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #header {
+    background-color: #fff;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2);
+  }
+  #header #logo {
+    padding: 8px 15px;
+    flex-grow: 1;
+  }
+  #header #logo img {
+    height: 50px;
+    width: auto;
+  }
+  #header h1 {
+    display: none;
+  }
+  #navbar {
+    position: fixed;
+    overflow-y: auto;
+    left: -100%;
+    transition: 0.4s ease all;
+    z-index: 6;
+    min-width: 250px;
+  }
+  #navbar.active {
+    left: 0;
+  }
+  #navbar a {
+    justify-content: start;
+  }
+  #sub-menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.4s ease all;
+    text-align: center;
+  }
+  #sub-menu li {
+    flex: 1 1 auto;
+    width: auto;
+  }
+  #sub-menu li:not(:last-child) a {
+    border-right: 1px solid #eee;
+  }
+  #sub-menu span {
+    font-size: 8pt;
+    display: block;
+  }
+  #sub-menu li a {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#ddd));
+    background-image: -o-linear-gradient(bottom, #fff, #ddd);
+    background-image: linear-gradient(to top, #fff, #ddd);
+    color: #43A047;
+  }
+  #header.affix #logo img {
+    max-height: 45px;
+  }
+  #header.affix #sub-menu {
+    bottom: 0%;
+  }
+  #navbar .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    padding: 0;
+    background-color: #eeee;
+    -webkit-transform: unset !important;
+            transform: unset !important;
+  }
+  #navbar .dropdown-menu li {
+    padding: 0;
+  }
+  .bannerqc-items {
+    height: 150px;
+  }
+  body {
+    font-size: 13pt;
   }
 }
 @media screen and (max-width: 991px) {
