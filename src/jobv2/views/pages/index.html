@@ -62,13 +62,13 @@
                         <div class="input-seach">
                             <i class="fa fa-briefcase icons-home" aria-hidden="true"></i>
                             <input class="w-100 " autocomplete="off"
-                                placeholder="Tiêu đề công việc, vị trí, địa điểm làm việc...">
+                                placeholder="Tiêu đề công việc, vị trí, địa điểm làm việc..." style="font-size:11pt">
                         </div>
                     </div>
                     <div class="col-md-4 py-2 py-md-0">
                         <div class="input-seach w-100 input-group">
                             <i class="fa fa-key icons-home" aria-hidden="true"></i>
-                            <select class="input-select input-seach selectpicker w-100">
+                            <select class="input-select input-seach selectpicker w-100" style="font-size:11pt">
                                 <option value="audi" selected disabled>Tất cả ngành nghề</option>
                                 {% for item in data.selects %}
                                 <option class="input-select-item" value="volvo">{{item}}</option>
@@ -79,7 +79,7 @@
                     <div class="col-md-4 py-2 py-md-0">
                         <div class="input-seach w-100 input-group">
                             <i class="fa fa-map-marker icons-home" aria-hidden="true"></i>
-                            <select class="input-select input-seach selectpicker w-100">
+                            <select class="input-select input-seach selectpicker w-100" style="font-size:11pt">
                                 <option value="audi" selected disabled>Địa điểm</option>
                                 {% for item in data.local %}
                                 <option class="input-select-item" value="volvo">{{item}}</option>
@@ -92,7 +92,7 @@
             <div class="col-md-4">
                 <div class="row h-100 py-2 py-md-0">
                     <div class="col ">
-                        <button type="submit" class="btn-submit-seach py-2 py-md-0">
+                        <button type="submit" class="btn-submit-seach py-2 py-md-0" style="font-size:12pt">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             Tìm kiếm
                         </button>
