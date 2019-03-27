@@ -82,26 +82,6 @@
                                     <div class="col-md-6 py-2">
                                         <div class="form-group">
                                             <select class="form-control form-control-sm rounded-0">
-                                                <option value="audi" selected disabled>Thường Trú</option>
-                                                {% for item in data.another %}
-                                                <option class="input-select-item" value="volvo">{{item}}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 py-2">
-                                        <div class="form-group">
-                                            <select class="form-control form-control-sm rounded-0">
-                                                <option value="audi" selected disabled>Hiện Tại</option>
-                                                {% for item in data.another %}
-                                                <option class="input-select-item" value="volvo">{{item}}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 py-2">
-                                        <div class="form-group">
-                                            <select class="form-control form-control-sm rounded-0">
                                                 <option value="audi" selected disabled>Hôn Nhân</option>
                                                 {% for item in data.another %}
                                                 <option class="input-select-item" value="volvo">{{item}}</option>
@@ -127,6 +107,16 @@
                                                 <option class="input-select-item" value="volvo">{{item}}</option>
                                                 {% endfor %}
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="text" id="" rows="3" placeholder="Nhập địa chỉ thường trú..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 py-2">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="text" id="" rows="3" placeholder="Nhập địa chỉ hiện tại..."></textarea>
                                         </div>
                                     </div>
                                 </div>
