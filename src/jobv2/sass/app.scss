@@ -15,11 +15,12 @@
 @import './listjobcompany';
 @import './person';
 @import './personlogin';
+@import './detailmaster';
 body{
     color: #000;
     font-family: 'Montserrat', sans-serif;
     @include max-xl {
-        font-size: 15pt;
+        font-size: 14pt;
     }
     @include max-md {
         font-size: 13pt;
@@ -209,5 +210,82 @@ body{
             width: 100%;
             text-align: center;
         }
+    }
+}
+.v-form{
+    display: flex;
+    align-items: start;
+    > *{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .v-select-add{
+        background-color: #555;
+        color: #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 5px 15px;
+    }
+    .v-textare-add, textarea{
+        width: 100%;
+    }
+    >.v-content-close{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .v-content-close span{
+        font-size: 11pt;
+    }
+    
+}
+.form-add {
+    text-align: right;
+    margin: 8px 0px 16px 0px;
+    a {
+        display: inline-block;
+        background-color: #4dafab;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: bold;
+
+    }
+}
+
+.ms-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include max-sm {
+        background-image: none;
+    }
+}
+.ms-selectable {
+    float: none!important;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 0rem;
+    @include max-sm {
+        // width: 60%!important;
+    }
+    &::after {
+        content: 'Ngành nghề đã chọn:';
+        display: block;
+        font-weight: bold;
+        color: #000;
+        margin: 8px 0px;
+    }   
+}
+.ms-list {
+    @include max-sm {
+        width: 100%!important;
+    }
+}
+.ms-selection {
+    flex: 0 0 100%;
+    max-width: 100%;
+     float: none!important;
+     @include max-sm {
+         float: left!important;
+        flex-direction: column;
     }
 }

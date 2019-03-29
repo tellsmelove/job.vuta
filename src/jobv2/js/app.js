@@ -1,3 +1,9 @@
+
+
+import Vue from 'vue';
+import formAdd from './vue/formAdd.vue';
+import vAddContent from "./vue/vAddContent.vue";
+
 var prevScrollpos = window.pageYOffset;
 var header = document.querySelector('#header');
 var sub_menu = document.getElementById('sub-menu');
@@ -6,6 +12,7 @@ var overlay = document.getElementById('overlay');
 $(document).ready(() => {
     require('./make_tag');
     require('./filters');
+    
     
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
@@ -151,3 +158,15 @@ function outSideClick(target){
         overlay.removeAttribute('style')
     }, 200);
 }
+$(function () {
+    $('#popup, #popup2').popover('enable')
+})
+
+
+var app = new Vue({
+    components: {
+        formAdd,
+        vAddContent
+    },
+}).$mount("#app");
+$('#keep-order').multiSelect({ keepOrder: true });

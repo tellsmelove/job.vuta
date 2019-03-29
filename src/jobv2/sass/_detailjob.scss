@@ -33,7 +33,7 @@
         font-weight: bold;
         border-radius: 4px;
         &:hover {
-            box-shadow: 3px 3px 3px rgba(#c0392b, .5);
+            box-shadow: 3px 3px 20px rgba(#c0392b, .4);
             transition: .3s ease-out all;
             color: #fff;
         }
@@ -76,6 +76,24 @@
     }
 }
 .list-detail {
-    border: 1px solid #a9acaf;
-    transition: .3s ease-out all;
+    &-items {
+        margin-bottom: 1rem;
+        h3 {
+            display: inline-block;
+            background-color: #43A047;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 0;
+            @include max-sm {
+                display: block;
+                text-align: center;
+            }
+
+        }
+        p {
+            &::before {
+                content: '+ ';
+            }
+        }
+    }
 }

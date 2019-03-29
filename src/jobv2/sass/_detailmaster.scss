@@ -1,0 +1,42 @@
+.other-tags {
+    
+}
+.job-tags{
+    display: inline-block;
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 4px;
+    margin: 4px 0px;
+    font-size: 11pt;
+    padding: 4px 4px;
+    min-width: 70px;
+    text-align: center;
+    &:hover {
+        background-color: rgba(#1c9c05, .7);
+        color: #fff;
+    }
+}
+.btn-sm {
+    min-width: 70px;
+    margin-right: 10px;
+}
+.banner-master {
+    height: 300px;
+    @include max-sm {
+        height: 200px;
+    }
+}
+.list-job-master {
+     li > a {
+        font-size: 14pt;
+        color: #000;
+        &::before {
+            content: '\f054 ';
+            font-family: Fontawesome;
+            margin-right: 5px;
+        }
+        &:hover {
+            color: #c0392b; 
+        }
+    }
+}

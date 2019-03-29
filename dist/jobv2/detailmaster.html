@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/font-awesome.css">
+    <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <title>Detail-Person</title>
+</head>
+
+<body>
+    <div id="app">
+        <header id="header">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-xl-3 col-md-2 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="./public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 px-0 header-middle order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng  & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li class="view d-lg-block d-md-none">
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Danh Sách</span>
+                                    <span>Tổng Hợp</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Danh sách công ty</a></li>
+                                        <li class="dropdown-item"><a href="#">Danh sách ứng viên</a></li>
+                                    </ul>
+                                </aside>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Việc làm</span>
+                                    <span>Vũng Tàu</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
+                                    </ul>
+                                </aside>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <aside id="sub-menu" class="col-xl-3 col-md-4 pl-md-0">
+                <ul class="d-flex h-100 nolist">
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-address-card-o"></i>
+                            <span>Nhập CV</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-file"></i>
+                            <span>Đăng tuyển</span>
+                        </a>
+                    </li>
+                    <li class="col-md-6 px-0 dropdown">
+                        <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-lg fa-user"></i>
+                            <span>Đăng ký</span>
+                        </a>
+                        <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <ul class="nolist">
+                                <li class="dropdown-item"><a href="#"><b>Đăng ký ứng viên</b></a></li>
+                                <li class="dropdown-item"><a href="#"><b>Đăng ký nhà tuyển dụng</b></a></li>
+                            </ul>
+                        </aside>
+                    </li>
+                    <li class="col-md-6 px-0">
+                        <a href="">
+                            <i class="fa fa-lg fa-lock"></i>
+                            <span>Đăng nhập</span>
+                        </a>
+                    </li>
+                   
+            </aside>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+        
+<section class="person py-lg-4 py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 offset-md-1 border py-3">
+                <div class="col-12">
+                    <h5 class="border-bottom text-center mb-0 w-100">
+                        <a href="#" class="title-post">Thông Tin Công Ty</a>
+                    </h5>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-3 col-12 mb-3 mb-md-0">
+                            <div class="post-item border">
+                                <div class="text-center avatar">
+                                    <a href="#"><img class="w-100 avatar-all"
+                                            src="http://thietkehoakim.com/upload/hinhanh/thuanthien2-08.png"
+                                            alt="eventjob"></a>
+                                </div>
+                                <h5 class="border-bottom text-center mb-0">
+                                    <a href="#" class="title-post">Vutaweb.vn</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="post-item h-100 d-flex flex-column">
+                                <div class="row portfolio flex-grow-1 ">
+                                    <div class="col-md-12">
+                                        <div class="row py-0 py-md-3">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-md-9 text-center text-md-left">
+                                                        <span>
+                                                            <h3 class="m-0"><b>CÔNG TY TNHH VUTATECH</b></h3>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <span>Cập Nhật: <span
+                                                                class="time-update">25/03/2019</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 py-2">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <span class="info-title">Ngành Nghề</span>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <span class="job-tags">Marketing</span>
+                                                        <span class="job-tags">Google Aw</span>
+                                                        <span class="job-tags">Sale</span>
+                                                        <span class="job-tags other-tags" title="Design,Web">Other
+                                                            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 py-2">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-6">
+                                                        <span class="info-title">Nhân Sự</span>
+                                                    </div>
+                                                    <div class="col-md-9 col-6">
+                                                        <span class="job-tags">
+                                                            10 NV</span> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 py-2">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="info-title">Trụ Sở</span>
+                                </div>
+                                <div class="col-md-9">
+                                    <button type="button" id="popup" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="72 Tôn Đức Thắng,Đống Đa">
+                                        Hà Nội
+                                    </button>
+                                    <button type="button" id="popup2" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="87 Hoàng Văn Thụ, Phú Nhuận">
+                                        TPHCM
+                                    </button>
+                                    <button type="button" id="popup" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="Nha Trang, Vũng Tàu">
+                                        Khác
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 py-2">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="info-title">VP Đại Diện</span>
+                                </div>
+                                <div class="col-md-9">
+                                    <button type="button" id="popup" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="123 Lê Hồng Phong">
+                                        Hải Phòng
+                                    </button>
+                                    <button type="button" id="popup2" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="87 Hoàng Văn Thụ, Phú Nhuận">
+                                        TPHCM
+                                    </button>
+                                    <button type="button" id="popup" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="Nha Trang, Vũng Tàu">
+                                        Khác
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 py-2">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="info-title">Chi Nhánh</span>
+                                </div>
+                                <div class="col-md-9">
+                                    <button type="button" id="popup" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="192 Bình Giã, Phường 8">
+                                        Vũng Tàu
+                                    </button>
+                                    <button type="button" id="popup2" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="87 Hoàng Văn Thụ, Phú Nhuận">
+                                        TPHCM
+                                    </button>
+                                    <button type="button" id="popup" class="btn-sm btn-secondary border-0"
+                                        data-container="body" data-toggle="popover" data-placement="top"
+                                        data-content="Nghệ An, Hà Tĩnh">
+                                        Khác
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <span class="info-title">MST-GPKD</span>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <span class="job-tags">3505985526651</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <span class="info-title">Số Phone</span>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <span class="job-tags">0912 312 312</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <span class="info-title">Vốn điều lệ</span>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <span class="job-tags">20.000.000.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <span class="info-title">Hotline</span>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <span class="job-tags">08 08 56 56 56</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <span class="info-title">Ngày Thành
+                                        Lập</span>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <span class="job-tags">25/09/2014</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <span class="info-title">Email</span>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <span class="job-tags">Ecom@vutatech.vn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row py-3">
+                <div class="col-md-10 offset-md-1">
+                    <div class="list-detail-items">
+                        <h3>Thông tin thêm:</h3>
+                        <div class="border p-3">
+                            <p>Chúng tôi đang tìm kiếm một kỹ sư lập trình backend
+                                JavaScript, người thành thạo với
+                                React.js. Trọng tâm chính của bạn
+                                sẽ là phát triển các thành phần giao diện người dùng và
+                                triển khai chúng theo thư viện
+                                React.js phổ biến (chẳng hạn như
+                                Flux hoặc Redux). Bạn phải đảm bảo rằng các components
+                                là một ứng dụng tổng thể, dễ phát
+                                triển, dễ bảo trì. Bạn sẽ phối
+                                hợp với phần còn lại của nhóm làm việc trên các tầng
+                                khác nhau của cơ sở hạ tầng. Do đó,
+                                cam kết giải quyết vấn đề hợp
+                                tác, thiết kế tinh vi và chất lượng sản phẩm là quan
+                                trọng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-10 offset-md-1">
+                <div class="row list-detail-items">
+                    <h3>Các Vị Trí Đang Tuyển Dụng</h3>
+                    <div class="col-12 border p-3">
+                        <ul class="nolist list-job-master w-100">
+                            <li><a href="#">Tuyển dụng nhân viên lao công</a>
+                            </li>
+                            <li><a href="#">Tuyển dụng senior Java</a></li>
+                            <li><a href="#">Tuyển dụng Junior Java</a></li>
+                            <li><a href="#">Tuyển dụng Thực tập sinh</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+<section class="py-lg-4 py-3">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 btn-backlink p-md-0">
+                <div class="btn-backlink_primary">
+                    <a href="#">Sửa Thông Tin</a>
+                </div>
+            </div>
+            <div class="col-md-4 btn-backlink p-md-0">
+                <div class="btn-backlink_secondary">
+                    <a href="#">Trở Về Trang Chủ</a>
+                </div>
+            </div>
+            <div class="col-md-4 btn-backlink p-md-0">
+                <div class="btn-backlink_info">
+                    <a href="tel:+0901238877">Contact Nhà Tuyển Dụng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <img class="banner-master" src="http://www.thietkeweb.com/dich-vu-web/images/support/banner.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section class="bannerQC py-lg-4 py-3">
+    <div class="container three-banner ">
+        <div class="row">
+            <div class="swiper-container swiper-person text-center">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank"><img
+                                src="http://blog.cosine-inn.com/wp-content/uploads/2013/05/cropped-cosine-banner-6-330x250.jpg"
+                                alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank"><img
+                                src="https://www.itsecurityguru.org/wp-content/uploads/2017/07/security-serious-banner-330x280-330x250.png"
+                                alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank"><img
+                                src="http://www.woorockets.com/wp-content/uploads/2017/01/banner-to-product-lines-330x250.png"
+                                alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blanl"><img
+                                src="https://2.bp.blogspot.com/-DKhksSLoIL4/XGKZLdZwNbI/AAAAAAAAQf0/84uvBvR-k8MWpIsPGY9MxV2IaatVsYGtwCLcBGAs/s1600/bread-breakfast-bun-1633525%2B%25281%2529.jpg"
+                                alt=""></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination pagination-person"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <footer id="footer" class="">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="row">
+            <div class="col-lg-4 mb-3 mb-lg-0">
+                <div class="footer-block">
+                    <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
+                    <address class="footer-body">
+                        
+                        <div class="address-footer">
+                            <p>Trụ sở chính: Tầng 3, Edyco building, 102A Lê Hồng Phong, Phường 7, Thành phố Vũng Tàu.</p>
+                            <dl>
+                                <dd>
+                                    <strong class="mr-1">Điện thoại</strong>
+                                    <a href="tel:0909556677">0909556677</a>
+                                </dd>
+                                <dd>
+                                    <strong class="mr-1">Email</strong>
+                                    <a href="mailto:hotro@vuta.com.vn">hotro@vuta.com.vn</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">Vị trí bản đồ</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.782451494951!2d107.07653895092606!3d10.35927226954976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756ff34707b7ad%3A0x57f311cbed9ff724!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIFZVVEFURUNI!5e0!3m2!1svi!2s!4v1552276979911"
+                        frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">
+                        Fanpage
+                    </h2>
+                    <div class="fb-page footer-body" data-href="https://www.facebook.com/zillmaphongba/" data-tabs="timeline"
+                        data-width="500" data-height="200" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/zillmaphongba/" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/zillmaphongba/">Live
+                                Game mobile</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <div id="overlay"></div>
+    </div>
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
+    <script src="./public/js/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>
+</body>
+
+</html>

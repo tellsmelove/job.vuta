@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/font-awesome.css">
+    <link rel="stylesheet" href="./public/css/swiper.min.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/multi-select.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <title>Create-CV</title>
+</head>
+
+<body>
+    <div id="app">
+        <header id="header">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-md-3 col-10">
+                <a href="#" class="text-md-center">
+                    <img src="./public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-9 pl-0 order-md-0 order-1">
+                <div class="d-flex flex-column h-100">
+                    <h1 class="mb-0 text-normal header-middle text-uppercase text-center">
+                        <b>Trung tâm tuyển dụng & giới thiệu việc làm vũng tàu <br> job.vuta.vn</b>
+                    </h1>
+                    <nav id="navbar">
+                        <ul class="nolist d-md-flex h-100">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-lg fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Lượt xem:</span>
+                                    <span>3,000,000</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span>Quản lý</span>
+                                    <span>Tài Khoản</span>
+                                </a>
+                                <aside class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="nolist">
+                                        <li class="dropdown-item"><a href="#">Việc làm quản lý</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm văn phòng</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thực tập</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm ngoài nước</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm thời vụ</a></li>
+                                        <li class="dropdown-item"><a href="#">Việc làm partime</a></li>
+                                    </ul>
+                                </aside>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="toggle" class="col-2 d-md-none d-block text-center">
+                <a href="#">
+                    <i class="fa fa-lg fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+        
+<section class="py-lg-5 py-3">
+    <div class="container">
+        <form action="" method="post">
+            <div class="porfolio-test px-3">
+                <div class="row py-lg-4">
+                    <div class="col-md-3">
+                        <div class="row sticky">
+                            <div class="col-md-12 col-6 justify-content-center text-center bg-success mb-lg-3">
+                                <div class="text-center pt-3">
+                                    <label class="position-relative avatar">
+                                        <img src="http://beta.bienhoagear.com/img/av.jpg" alt="">
+                                        <input type="file" name="" id="" hidden>
+                                        <div class="text-white upload-text">Chọn ảnh logo<br> Công ty</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-6 justify-content-center text-center bg-success mb-lg-3">
+                                <div class="text-center pt-3">
+                                    <label class="position-relative avatar">
+                                        <img src="http://beta.bienhoagear.com/img/av.jpg" alt="">
+                                        <input type="file" name="" id="" hidden>
+                                        <div class="text-white upload-text">Chọn ảnh banner SP</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-6 justify-content-center text-center bg-success">
+                                <div class="text-center pt-3">
+                                    <label class="position-relative avatar">
+                                        <img src="http://beta.bienhoagear.com/img/av.jpg" alt="">
+                                        <input type="file" name="" id="" hidden>
+                                        <div class="text-white upload-text">Chọn ảnh Công<br> ty</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 pr-md-0 mb-3">
+                        <div class="bg-white profile">
+                            <h5 class="text-center mb-0 mt-3 mt-md-0">
+                                <span href="#" class="title-updatecv">Thông Tin Công Ty</span>
+                            </h5>
+                            <div class="px-3 pt-3">
+                                <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="row">
+                                            <div class="col-md-12 py-1">
+                                                <div class="form-group">
+                                                    <span class="info-title">Tên công ty</span>
+                                                    <input type="text" class="form-control form-control-sm rounded-0" placeholder="Nhập tên công ty. . .">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 py-1">
+                                                <div class="form-group">
+                                                    <span class="info-title">MST - GPKD</span>
+                                                    <input type="number" class="form-control form-control-sm rounded-0" placeholder="Nhập mã số thuế. . .">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 py-1">
+                                                <div class="form-group">
+                                                    <span class="info-title">Website</span>
+                                                    <textarea class="form-control" name="text" id="" rows="2" placeholder="Nhập địa chỉ website..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 py-1">
+                                                <div class="form-group">
+                                                    <span class="info-title">Vốn điều lệ</span>
+                                                    <textarea class="form-control" name="text" id="" rows="2" placeholder="Nhập vốn điều lệ..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 py-1">
+                                                <div class="form-group">
+                                                    <span class="info-title">Số lượng nhân sự</span>
+                                                    <textarea class="form-control" name="text" id="" rows="2" placeholder="Nhập số lượng nhân sự..."></textarea>
+                                                </div>
+                                            </div>
+                                       </div>
+                                   </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12 py-1">
+                                                <span class="info-title">Tất cả ngành nghề</span>
+                                                <select id='keep-order' multiple='multiple'>
+                                                    <option value='it'>IT</option>
+                                                    <option value='marketing'>Marketing</option>
+                                                    <option value='sale'>Sale</option>
+                                                    <option value='nhanvientrongquannet'>Nhân viên trông quán nét</option>
+                                                    <option value='elem_5'>elem 5</option>
+                                                    <option value='elem_6'>elem 6</option>
+                                                    <option value='elem_7'>elem 7</option>
+                                                    <option value='elem_8'>elem 8</option>
+                                                    <option value='elem_9'>elem 9</option>
+                                                    <option value='elem_100'>elem 100</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="text-center mb-0 mt-3 mt-md-0">
+                                <span href="#" class="title-updatecv">Thông Tin Địa Điểm</span>
+                            </h5>
+                            <div class="px-3 pt-3">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <span class="info-title">Trụ sở</span>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <form-add id="form-one" name="test" placeholder="Nhap dia chi">
+                                            <v-add-content name="test" val='con gio, 72 Hàng Mã' class="d-flex">
+                                                <option value="con gio">Hà Nội</option>
+                                                <option value="kitty">BR-VT</option>
+                                                <option value="test 10">TPHCM</option>
+                                                <option value="balbal">Nha Trang</option>
+                                                <option value="ok">is ok</option>
+                                                <option value="test 1">test 7</option>
+                                            </v-add-content>
+                                            <a href="#" class="btn btn-" slot="add_more">
+                                                Thêm mới
+                                            </a>
+                                        </form-add>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <span class="info-title">VP đại diện</span>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <form-add id="form-one" name="test" placeholder="Nhap dia chi">
+                                            <v-add-content name="test" val='con gio, 72 Hàng Mã' class="d-flex">
+                                                <option value="con gio">Hà Nội</option>
+                                                <option value="kitty">BR-VT</option>
+                                                <option value="test 10">TPHCM</option>
+                                                <option value="balbal">Nha Trang</option>
+                                                <option value="ok">is ok</option>
+                                                <option value="test 1">test 7</option>
+                                            </v-add-content>
+                                            <a href="#" class="btn btn-" slot="add_more">
+                                                Thêm mới
+                                            </a>
+                                        </form-add>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <span class="info-title">Chi nhánh</span>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <form-add id="form-one" name="test" placeholder="Nhap dia chi">
+                                            <v-add-content name="test" val='con gio, 72 Hàng Mã' class="d-flex">
+                                                <option value="con gio">Hà Nội</option>
+                                                <option value="kitty">BR-VT</option>
+                                                <option value="test 10">TPHCM</option>
+                                                <option value="balbal">Nha Trang</option>
+                                                <option value="ok">is ok</option>
+                                                <option value="test 1">test 7</option>
+                                            </v-add-content>
+                                            <a href="#" class="btn btn-" slot="add_more">
+                                                Thêm mới
+                                            </a>
+                                        </form-add>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="text-center mb-0 mt-3 mt-md-0">
+                                <span href="#" class="title-updatecv">Thông Tin Liên Hệ</span>
+                            </h5>
+                            <div class="px-3 pt-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+                                                <div class="form-group">
+                                                    <span class="info-title">Số điện thoại</span>
+                                                    <input type="text" class="form-control form-control-sm rounded-0"
+                                                        placeholder="Nhập số điện thoại. . .">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 py-2">
+                                                <div class="form-group">
+                                                    <span class="info-title">Hotline</span>
+                                                    <input type="number" class="form-control form-control-sm rounded-0"
+                                                        placeholder="Nhập Hotline. . .">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 py-2">
+                                                <div class="form-group">
+                                                    <span class="info-title">Email</span>
+                                                    <input type="email" class="form-control form-control-sm rounded-0" placeholder="Nhập email. . .">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-lg-4 py-3 bg-light">
+                    <div class="col-md-12 py-2 mb-lg-3">
+                        <div class="porfolio-cv">
+                            <h5 class="text-center mb-0">
+                                <span href="#" class="title-updatecv">Thông Tin Thêm</span>
+                            </h5>
+                            <textarea class="form-control" name="text" id="" rows="6"
+                                placeholder="Nhập thông tin thêm..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12 py-2 mb-lg-3">
+                        <div class="porfolio-cv">
+                            <h5 class="text-center mb-0">
+                                <span href="#" class="title-updatecv">Thông Tin Tuyển Dụng</span>
+                            </h5>
+                            <textarea class="form-control" name="text" id="" rows="6"
+                                placeholder="Nhập danh sách tuyển dụng ở Job..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center w-100 py-3">
+                        <button type="submit" class="btn-upload">UpLoad</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+        <footer id="footer" class="">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="row">
+            <div class="col-lg-4 mb-3 mb-lg-0">
+                <div class="footer-block">
+                    <h2 class="font-weight-bold footer-title">Công Ty Vuta Việc Làm</h2>
+                    <address class="footer-body">
+                        
+                        <div class="address-footer">
+                            <p>Trụ sở chính: Tầng 3, Edyco building, 102A Lê Hồng Phong, Phường 7, Thành phố Vũng Tàu.</p>
+                            <dl>
+                                <dd>
+                                    <strong class="mr-1">Điện thoại</strong>
+                                    <a href="tel:0909556677">0909556677</a>
+                                </dd>
+                                <dd>
+                                    <strong class="mr-1">Email</strong>
+                                    <a href="mailto:hotro@vuta.com.vn">hotro@vuta.com.vn</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">Vị trí bản đồ</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.782451494951!2d107.07653895092606!3d10.35927226954976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756ff34707b7ad%3A0x57f311cbed9ff724!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIFZVVEFURUNI!5e0!3m2!1svi!2s!4v1552276979911"
+                        frameborder="0" style="border:0" allowfullscreen width="100%" class="footer-body"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                <div class="footer-block">
+                    <h2 class="footer-title">
+                        Fanpage
+                    </h2>
+                    <div class="fb-page footer-body" data-href="https://www.facebook.com/zillmaphongba/" data-tabs="timeline"
+                        data-width="500" data-height="200" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/zillmaphongba/" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/zillmaphongba/">Live
+                                Game mobile</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <div id="overlay"></div>
+    </div>
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/jquery-ui.min.js"></script>
+    <script src="./public/js/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/swiper.min.js"></script>
+    <script src="./public/js/jquery.multi-select.js"></script>
+    <script src="./public/js/bootstrap-tagsinput.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2046573405635669&autoLogAppEvents=1"></script>
+</body>
+
+</html>

@@ -509,7 +509,7 @@ input[type=number] {
   border-radius: 4px;
 }
 .detail-company__link:hover {
-  box-shadow: 3px 3px 3px rgba(192, 57, 43, 0.5);
+  box-shadow: 3px 3px 20px rgba(192, 57, 43, 0.4);
   transition: 0.3s ease-out all;
   color: #fff;
 }
@@ -538,9 +538,18 @@ input[type=number] {
   color: #c0392b;
 }
 
-.list-detail {
-  border: 1px solid #a9acaf;
-  transition: 0.3s ease-out all;
+.list-detail-items {
+  margin-bottom: 1rem;
+}
+.list-detail-items h3 {
+  display: inline-block;
+  background-color: #43A047;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0;
+}
+.list-detail-items p::before {
+  content: "+ ";
 }
 
 .porfolio-test {
@@ -1392,6 +1401,44 @@ table .money-job {
   color: #c0392b;
 }
 
+.job-tags {
+  display: inline-block;
+  background-color: #6c757d;
+  color: #fff;
+  border-radius: 4px;
+  margin: 4px 0px;
+  font-size: 11pt;
+  padding: 4px 4px;
+  min-width: 70px;
+  text-align: center;
+}
+.job-tags:hover {
+  background-color: rgba(28, 156, 5, 0.7);
+  color: #fff;
+}
+
+.btn-sm {
+  min-width: 70px;
+  margin-right: 10px;
+}
+
+.banner-master {
+  height: 300px;
+}
+
+.list-job-master li > a {
+  font-size: 14pt;
+  color: #000;
+}
+.list-job-master li > a::before {
+  content: "\F054";
+  font-family: Fontawesome;
+  margin-right: 5px;
+}
+.list-job-master li > a:hover {
+  color: #c0392b;
+}
+
 body {
   color: #000;
   font-family: "Montserrat", sans-serif;
@@ -1553,6 +1600,77 @@ body {
   width: 100%;
   text-align: center;
 }
+
+.v-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: start;
+}
+.v-form > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.v-form .v-select-add {
+  background-color: #555;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px 15px;
+}
+.v-form .v-textare-add, .v-form textarea {
+  width: 100%;
+}
+.v-form > .v-content-close {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.v-form .v-content-close span {
+  font-size: 11pt;
+}
+
+.form-add {
+  text-align: right;
+  margin: 8px 0px 16px 0px;
+}
+.form-add a {
+  display: inline-block;
+  background-color: #4dafab;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ms-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ms-selectable {
+  float: none !important;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 0rem;
+}
+.ms-selectable::after {
+  content: "Ng\E0nh ngh\1EC1   \111\E3   ch\1ECDn:";
+  display: block;
+  font-weight: bold;
+  color: #000;
+  margin: 8px 0px;
+}
+
+.ms-selection {
+  flex: 0 0 100%;
+  max-width: 100%;
+  float: none !important;
+}
+
 @media screen and (min-width: 768px) and (min-width: 768px) {
   #header.affix .header-middle {
     flex: 0 0 50%;
@@ -1566,11 +1684,13 @@ body {
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 767px) {
   #header #logo a img {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 768px) {
   #header {
     background-color: #43A047;
@@ -1695,6 +1815,7 @@ body {
     border-bottom: 1px solid #eee;
   }
 }
+
 @media screen and (min-width: 992px) {
   #header h1 {
     font-size: 11pt;
@@ -1710,6 +1831,7 @@ body {
     display: inline-block;
   }
 }
+
 @media screen and (min-width: 768px) and (min-width: 992px) {
   #header.affix .header-middle {
     flex: 0 0 40%;
@@ -1732,21 +1854,25 @@ body {
     line-height: 0.75em;
   }
 }
+
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   #header #logo a img {
     max-width: 160px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   #header h1 {
     font-size: 12pt;
   }
 }
+
 @media (min-width: 1900px) {
   .container {
     max-width: 1450px;
   }
 }
+
 @media screen and (max-width: 575px) {
   #sub-menu {
     padding: 0;
@@ -1768,6 +1894,10 @@ body {
   .content-company {
     border-top: 1px solid #dee2e6;
     border-left: 0px solid #dee2e6 !important;
+  }
+  .list-detail-items h3 {
+    display: block;
+    text-align: center;
   }
   .employer-box h5 {
     font-size: 12pt;
@@ -1837,6 +1967,9 @@ body {
   .deadtime-job {
     display: none;
   }
+  .banner-master {
+    height: 200px;
+  }
   body {
     font-size: 12pt;
   }
@@ -1861,7 +1994,18 @@ body {
   .banner-bottom {
     display: none;
   }
+  .ms-container {
+    background-image: none;
+  }
+  .ms-list {
+    width: 100% !important;
+  }
+  .ms-selection {
+    float: left !important;
+    flex-direction: column;
+  }
 }
+
 @media screen and (max-width: 767px) {
   #header {
     background-color: #fff;
@@ -1942,6 +2086,7 @@ body {
     font-size: 13pt;
   }
 }
+
 @media screen and (max-width: 991px) {
   .bannerqc-detail {
     display: none;
@@ -1965,6 +2110,7 @@ body {
     border-bottom: 1px solid #dee2e6;
   }
 }
+
 @media screen and (max-width: 1199px) {
   .content-company {
     border-left: 1px solid #dee2e6;
@@ -1973,6 +2119,6 @@ body {
     border-right: none;
   }
   body {
-    font-size: 15pt;
+    font-size: 14pt;
   }
 }
