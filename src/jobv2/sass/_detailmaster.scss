@@ -37,3 +37,10 @@
         }
     }
 }
+.title-content-master {
+    h3 {
+        @include max-sm {
+            width: 100%;
+        }
+    }
+}

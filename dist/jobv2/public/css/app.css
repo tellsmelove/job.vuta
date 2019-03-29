@@ -1970,6 +1970,9 @@ body {
   .banner-master {
     height: 200px;
   }
+  .title-content-master h3 {
+    width: 100%;
+  }
   body {
     font-size: 12pt;
   }
@@ -1994,8 +1997,27 @@ body {
   .banner-bottom {
     display: none;
   }
-  .ms-container {
-    background-image: none;
+  .v-form {
+    flex-wrap: wrap;
+  }
+  .v-form > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .v-form .v-select-add {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .v-form > .v-content-close {
+    text-align: center;
+    width: 100%;
+  }
+  .v-form .v-content-close span {
+    text-align: center;
+  }
+  .form-add {
+    text-align: center;
   }
   .ms-list {
     width: 100% !important;

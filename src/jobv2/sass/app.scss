@@ -214,10 +214,19 @@ body{
 }
 .v-form{
     display: flex;
+    
     align-items: start;
+    @include max-sm {
+        flex-wrap: wrap;
+    }
     > *{
         padding-left: 15px;
         padding-right: 15px;
+        @include max-sm {
+        padding-left: 0;
+        padding-right: 0;
+        }
+    
     }
     .v-select-add{
         background-color: #555;
@@ -225,6 +234,11 @@ body{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         padding: 5px 15px;
+        @include max-sm {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 12px;
+        }
     }
     .v-textare-add, textarea{
         width: 100%;
@@ -232,15 +246,25 @@ body{
     >.v-content-close{
         padding-left: 0px;
         padding-right: 0px;
+        @include max-sm {
+            text-align: center;
+            width: 100%;
+        }
     }
     .v-content-close span{
         font-size: 11pt;
+        @include max-sm {
+            text-align: center;
+        }
     }
     
 }
 .form-add {
     text-align: right;
     margin: 8px 0px 16px 0px;
+    @include max-sm {
+        text-align: center;
+    }
     a {
         display: inline-block;
         background-color: #4dafab;
@@ -255,9 +279,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    @include max-sm {
-        background-image: none;
-    }
 }
 .ms-selectable {
     float: none!important;
