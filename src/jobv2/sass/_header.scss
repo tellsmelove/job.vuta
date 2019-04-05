@@ -408,6 +408,27 @@
     background-color: #5ec3ad;
 }
 .dropdown-list {
-    max-height: 180px;
+    max-height: 210px;
     overflow-y: auto;
+}
+*::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: #43A047;
+	border: 1px solid #177c20;
+}
+body{
+    scrollbar-color: #43A047;
+    scrollbar-width: 5px;
 }

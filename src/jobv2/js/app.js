@@ -1,5 +1,3 @@
-
-
 import Vue from 'vue';
 import formAdd from './vue/formAdd.vue';
 import vAddContent from "./vue/vAddContent.vue";
@@ -12,7 +10,6 @@ var overlay = document.getElementById('overlay');
 $(document).ready(() => {
     require('./make_tag');
     require('./filters');
-    
     
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
@@ -32,7 +29,7 @@ $(document).ready(() => {
         prevScrollpos = currentScrollPos;
     }
     if(toggle_menu){
-        toggle_menu.addEventListener('click', (e) => {
+        $('#toggle').click((e) => {
             e.preventDefault();
             let navbar = document.getElementById('navbar');
             let height = header.clientHeight;
@@ -169,4 +166,8 @@ var app = new Vue({
         vAddContent
     },
 }).$mount("#app");
-$('#keep-order').multiSelect({ keepOrder: true });
+
+const mulSlc = $('#keep-order')
+if (mulSlc && mulSlc.length !== 0){
+    $(mulSlc).multiSelect({ keepOrder: true });
+}

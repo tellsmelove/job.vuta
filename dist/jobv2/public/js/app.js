@@ -13103,7 +13103,7 @@ $(document).ready(function () {
   };
 
   if (toggle_menu) {
-    toggle_menu.addEventListener('click', function (e) {
+    $('#toggle').click(function (e) {
       e.preventDefault();
       var navbar = document.getElementById('navbar');
       var height = header.clientHeight;
@@ -13259,9 +13259,13 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     vAddContent: _vue_vAddContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 }).$mount("#app");
-$('#keep-order').multiSelect({
-  keepOrder: true
-});
+var mulSlc = $('#keep-order');
+
+if (mulSlc && mulSlc.length !== 0) {
+  $(mulSlc).multiSelect({
+    keepOrder: true
+  });
+}
 
 /***/ }),
 
