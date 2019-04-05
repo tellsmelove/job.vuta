@@ -13227,7 +13227,7 @@ $(document).ready(function () {
             }
           }
         });
-      }
+      } else swiper.querySelector('.swiper-wrapper').classList.add('flex-column');
     }
   } catch (err) {
     _didIteratorError = true;

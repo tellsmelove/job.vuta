@@ -148,6 +148,9 @@ $(document).ready(() => {
                 }
             });
         }
+        else (
+            swiper.querySelector('.swiper-wrapper').classList.add('flex-column')
+        )
     }
 })
 function outSideClick(target){
