@@ -105,46 +105,49 @@ $(document).ready(() => {
 
     var post_swiper_index = document.querySelectorAll('[data-swiper]')
     for (let swiper of post_swiper_index) {
-        new Swiper(swiper.dataset.swiper, {
-            slidesPerView: 3,
-            direction: 'vertical',
-            simulateTouch: false,
-            autoplay: {
-                delay: 5000,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    direction: 'horizontal',
-                    simulateTouch: true,
-                    autoplay: {
-                        delay: 5000,
+        let swiper_item = swiper.querySelectorAll('.swiper-slide');
+        if (swiper_item.length >= 3){
+            new Swiper(swiper.dataset.swiper, {
+                slidesPerView: 3,
+                direction: 'vertical',
+                simulateTouch: false,
+                autoplay: {
+                    delay: 5000,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        direction: 'horizontal',
+                        simulateTouch: true,
+                        autoplay: {
+                            delay: 5000,
+                        },
                     },
-                },
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    direction: 'horizontal',
-                    simulateTouch: true,
-                    autoplay: {
-                        delay: 5000,
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        direction: 'horizontal',
+                        simulateTouch: true,
+                        autoplay: {
+                            delay: 5000,
+                        },
                     },
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                    direction: 'vertical',
-                    simulateTouch: false,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                    direction: 'vertical',
-                    simulateTouch: false,
-                },
-            }
-        });
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                        direction: 'vertical',
+                        simulateTouch: false,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                        direction: 'vertical',
+                        simulateTouch: false,
+                    },
+                }
+            });
+        }
     }
 })
 function outSideClick(target){

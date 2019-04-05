@@ -13184,46 +13184,50 @@ $(document).ready(function () {
   try {
     for (var _iterator = post_swiper_index[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var swiper = _step.value;
-      new Swiper(swiper.dataset.swiper, {
-        slidesPerView: 3,
-        direction: 'vertical',
-        simulateTouch: false,
-        autoplay: {
-          delay: 5000
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            direction: 'horizontal',
-            simulateTouch: true,
-            autoplay: {
-              delay: 5000
+      var swiper_item = swiper.querySelectorAll('.swiper-slide');
+
+      if (swiper_item.length >= 3) {
+        new Swiper(swiper.dataset.swiper, {
+          slidesPerView: 3,
+          direction: 'vertical',
+          simulateTouch: false,
+          autoplay: {
+            delay: 5000
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              direction: 'horizontal',
+              simulateTouch: true,
+              autoplay: {
+                delay: 5000
+              }
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              direction: 'horizontal',
+              simulateTouch: true,
+              autoplay: {
+                delay: 5000
+              }
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+              direction: 'vertical',
+              simulateTouch: false
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+              direction: 'vertical',
+              simulateTouch: false
             }
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            direction: 'horizontal',
-            simulateTouch: true,
-            autoplay: {
-              delay: 5000
-            }
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            direction: 'vertical',
-            simulateTouch: false
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            direction: 'vertical',
-            simulateTouch: false
           }
-        }
-      });
+        });
+      }
     }
   } catch (err) {
     _didIteratorError = true;
