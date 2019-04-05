@@ -348,6 +348,15 @@ input[type=number] {
   display: block;
 }
 
+.manage {
+  background-color: #5ec3ad;
+}
+
+.dropdown-list {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
 #footer {
   background-image: url("https://ak0.picdn.net/shutterstock/videos/18131500/thumb/3.jpg");
   background-attachment: fixed;
