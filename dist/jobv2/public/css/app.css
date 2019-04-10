@@ -1293,34 +1293,17 @@ table a:hover {
   transition: 0.4s ease all;
   position: relative;
   z-index: 0;
-}
-.list-person__item::before, .list-person__item::after {
-  content: "";
-  width: 0%;
-  height: 0%;
-  position: absolute;
-  border-color: transparent;
-  border-style: dashed;
+  outline: 1px solid transparent;
+  outline-offset: 7px;
   transition: 0.4s ease all;
-  z-index: 1;
-}
-.list-person__item::before {
-  border-width: 0 0 1px 1px;
-  left: 0;
-  bottom: 0;
-}
-.list-person__item::after {
-  border-width: 1px 1px 0 0;
-  right: 0;
-  top: 0;
 }
 .list-person__item:hover {
-  box-shadow: 2px 2px 25px rgba(214, 214, 214, 0.4);
+  outline-color: green;
+  outline-offset: 2px;
 }
-.list-person__item:hover::before, .list-person__item:hover::after {
-  width: 100%;
-  height: 100%;
-  border-color: green;
+.list-person_fixed {
+  position: relative;
+  z-index: 2;
 }
 
 .person-tags {

@@ -5,42 +5,26 @@
 }
 .list-person {
     &__item {
-        // border: 1px solid #dee2e6;
         border-radius: 4px;
         background-color: #fff;
         box-shadow: 2px 2px 5px rgba(#a9acaf, .2);
         transition: .4s ease all;
         position: relative;
         z-index: 0;
-        &::before, &::after{
-            content: '';
-            width: 0%;
-            height: 0%;
-            position: absolute;
-            border-color: transparent;
-            border-style: dashed;
-            transition: .4s ease all;
-            z-index: 1;
-        }
-        &::before{
-            border-width: 0 0 1px 1px;
-            left: 0;
-            bottom: 0;
-        }
-        &::after{
-            border-width: 1px 1px 0 0;
-            right: 0;
-            top: 0;
-        }
+        
+        outline: 1px solid transparent;
+        outline-offset: 7px;
+        transition: .4s ease all;
         &:hover {
-            // border: 1px solid #a9acaf;
-            box-shadow: 2px 2px 25px rgba(#d6d6d6, .4);
-            &::before, &::after{
-                width: 100%;
-                height: 100%;
-                border-color: green;
-            }
+            outline-color: green;
+            outline-offset: 2px;
         }
+        
+    }
+    &_fixed {
+        position: relative;
+        z-index: 2;
+        
     }   
 }
 .person{
@@ -48,7 +32,6 @@
        display: inline-block;
         background-color: #7a7b7b;
         color: #fff;
-        // border-radius: 4px;
         margin: 0px 8px 4px 0px;
         font-size: 10pt;
         min-width: 50px;
