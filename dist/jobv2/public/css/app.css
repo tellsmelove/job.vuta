@@ -1630,6 +1630,16 @@ body {
   text-align: center;
 }
 
+.data-company {
+  outline: 1px solid transparent;
+  outline-offset: 7px;
+  transition: 0.4s ease all;
+}
+.data-company:hover {
+  outline-color: #2225d1;
+  outline-offset: 2px;
+}
+
 .v-form {
   display: -webkit-box;
   display: -webkit-flex;

@@ -201,7 +201,6 @@ body{
         transform: translate(-50%, -50%);
         background-color: rgba(71, 191, 49, .6);
         color: #fff;
-        // padding: 40px 40px;
         font-size: 18pt;
         font-weight: bold;
         span {
@@ -210,6 +209,15 @@ body{
             width: 100%;
             text-align: center;
         }
+    }
+}
+.data-company {
+    outline: 1px solid transparent;
+    outline-offset: 7px;
+    transition: .4s ease all;
+    &:hover {
+        outline-color: #2225d1;
+        outline-offset: 2px;
     }
 }
 .v-form{
@@ -285,9 +293,7 @@ body{
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 0rem;
-    @include max-sm {
-        // width: 60%!important;
-    }
+    
     &::after {
         content: 'Ngành nghề đã chọn:';
         display: block;
