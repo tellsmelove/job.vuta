@@ -358,3 +358,11 @@ body{
 .event-box:hover .event-box-overlay {
     opacity: 1;
 }
+.banner-ngang {
+    img {
+        height: 300px;
+        @include max-sm {
+            height: auto!important;
+        }
+    }
+}

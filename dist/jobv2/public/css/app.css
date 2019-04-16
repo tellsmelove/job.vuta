@@ -1726,6 +1726,10 @@ body {
   opacity: 1;
 }
 
+.banner-ngang img {
+  height: 300px;
+}
+
 @media screen and (min-width: 768px) and (min-width: 768px) {
   #header.affix .header-middle {
     flex: 0 0 50%;
@@ -2085,6 +2089,9 @@ body {
     font-size: 15px !important;
   }
   .event-box img {
+    height: auto !important;
+  }
+  .banner-ngang img {
     height: auto !important;
   }
 }
