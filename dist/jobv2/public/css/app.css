@@ -1525,7 +1525,7 @@ body {
 }
 
 .swiper-slide {
-  height: auto;
+  height: auto !important;
 }
 
 .title-post {
@@ -1616,7 +1616,7 @@ body {
 .data-company {
   outline: 1px solid transparent;
   outline-offset: 7px;
-  transition: 0.4s ease all;
+  transition: 0.2s ease all;
 }
 .data-company:hover {
   outline-color: #2225d1;
