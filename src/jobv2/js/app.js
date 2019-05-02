@@ -106,7 +106,7 @@ $(document).ready(() => {
     var post_swiper_index = document.querySelectorAll('[data-swiper]')
     for (let swiper of post_swiper_index) {
         let swiper_item = swiper.querySelectorAll('.swiper-slide');
-        if (swiper_item.length >= 3){
+        if (swiper_item.length >= 2){
             new Swiper(swiper.dataset.swiper, {
                 slidesPerView: 3,
                 direction: 'vertical',
@@ -123,6 +123,10 @@ $(document).ready(() => {
                         autoplay: {
                             delay: 5000,
                         },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
                     },
                     640: {
                         slidesPerView: 1,
@@ -131,6 +135,10 @@ $(document).ready(() => {
                         simulateTouch: true,
                         autoplay: {
                             delay: 5000,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
                         },
                     },
                     768: {
